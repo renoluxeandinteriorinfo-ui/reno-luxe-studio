@@ -45,12 +45,12 @@ export type EnquiryDialogProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   kind: EnquiryKind;
-  reference?: string;
+  reference?: string | undefined;
   title: string;
-  description?: string;
-  withQuantity?: boolean;
-  notesLabel?: string;
-  extra?: ReactNode;
+  description?: string | undefined;
+  withQuantity?: boolean | undefined;
+  notesLabel?: string | undefined;
+  extra?: ReactNode | undefined;
   buildLines: (values: EnquiryValues) => string[];
   emailSubject: string;
 };
@@ -102,9 +102,14 @@ export function EnquiryDialog({
     setValues((prev) => ({ ...prev, [key]: event.target.value }));
 
   async function submit(channel: "whatsapp" | "email") {
-    if (!values.name.trim()) return toast.error("Please enter your name");
-    if (!values.country.trim() || !values.city.trim())
-      return toast.error("Please enter your country and city — we deliver worldwide");
+    if (!values.name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+    if (!values.country.trim() || !values.city.trim()) {
+      toast.error("Please enter your country and city — we deliver worldwide");
+      return;
+    }
 
     setBusy(channel);
     const lines = buildLines(values);

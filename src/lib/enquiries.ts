@@ -12,15 +12,15 @@ export type EnquiryKind =
 
 export type EnquiryInput = {
   kind: EnquiryKind;
-  reference?: string;
-  name?: string;
-  email?: string;
-  phone?: string;
-  country?: string;
-  city?: string;
-  area?: string;
-  message?: string;
-  details?: Record<string, unknown>;
+  reference?: string | undefined;
+  name?: string | undefined;
+  email?: string | undefined;
+  phone?: string | undefined;
+  country?: string | undefined;
+  city?: string | undefined;
+  area?: string | undefined;
+  message?: string | undefined;
+  details?: Record<string, unknown> | undefined;
 };
 
 /**

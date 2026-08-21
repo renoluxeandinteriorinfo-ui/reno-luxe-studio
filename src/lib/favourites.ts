@@ -39,7 +39,7 @@ export function useToggleFavourite() {
       item_type: FavouriteType;
       item_id: string;
       title: string;
-      image_url?: string | null;
+      image_url?: string | null | undefined;
     }) => {
       if (!user) throw new Error("not-signed-in");
       const { data: existing } = await supabase
