@@ -11,9 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ConsultationRouteImport } from './routes/consultation'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DeliveryRouteImport } from './routes/delivery'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as PlansRouteImport } from './routes/plans'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as VijuRouteImport } from './routes/viju'
+import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
@@ -27,9 +34,34 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConsultationRoute = ConsultationRouteImport.update({
+  id: '/consultation',
+  path: '/consultation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeliveryRoute = DeliveryRouteImport.update({
+  id: '/delivery',
+  path: '/delivery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlansRoute = PlansRouteImport.update({
   id: '/plans',
   path: '/plans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsRoute = ProductsRouteImport.update({
@@ -41,6 +73,16 @@ const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
   getParentRoute: () => rootRouteImport,
+} as any)
+const VijuRoute = VijuRouteImport.update({
+  id: '/viju',
+  path: '/viju',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioSlugRoute = PortfolioSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => PortfolioRoute,
 } as any)
 const ProductsSlugRoute = ProductsSlugRouteImport.update({
   id: '/$slug',
@@ -56,18 +98,32 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/plans': typeof PlansRoute
+  '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/viju': typeof VijuRoute
+  '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/plans': typeof PlansRoute
+  '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/viju': typeof VijuRoute
+  '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -75,9 +131,16 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/consultation': typeof ConsultationRoute
+  '/contact': typeof ContactRoute
+  '/delivery': typeof DeliveryRoute
+  '/faq': typeof FaqRoute
   '/plans': typeof PlansRoute
+  '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/services': typeof ServicesRouteWithChildren
+  '/viju': typeof VijuRoute
+  '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -86,27 +149,48 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/consultation'
+    | '/contact'
+    | '/delivery'
+    | '/faq'
     | '/plans'
+    | '/portfolio'
     | '/products'
     | '/services'
+    | '/viju'
+    | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/consultation'
+    | '/contact'
+    | '/delivery'
+    | '/faq'
     | '/plans'
+    | '/portfolio'
     | '/products'
     | '/services'
+    | '/viju'
+    | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/consultation'
+    | '/contact'
+    | '/delivery'
+    | '/faq'
     | '/plans'
+    | '/portfolio'
     | '/products'
     | '/services'
+    | '/viju'
+    | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
   fileRoutesById: FileRoutesById
@@ -114,9 +198,15 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ConsultationRoute: typeof ConsultationRoute
+  ContactRoute: typeof ContactRoute
+  DeliveryRoute: typeof DeliveryRoute
+  FaqRoute: typeof FaqRoute
   PlansRoute: typeof PlansRoute
+  PortfolioRoute: typeof PortfolioRouteWithChildren
   ProductsRoute: typeof ProductsRouteWithChildren
   ServicesRoute: typeof ServicesRouteWithChildren
+  VijuRoute: typeof VijuRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -135,11 +225,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/consultation': {
+      id: '/consultation'
+      path: '/consultation'
+      fullPath: '/consultation'
+      preLoaderRoute: typeof ConsultationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delivery': {
+      id: '/delivery'
+      path: '/delivery'
+      fullPath: '/delivery'
+      preLoaderRoute: typeof DeliveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plans': {
       id: '/plans'
       path: '/plans'
       fullPath: '/plans'
       preLoaderRoute: typeof PlansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products': {
@@ -155,6 +280,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/viju': {
+      id: '/viju'
+      path: '/viju'
+      fullPath: '/viju'
+      preLoaderRoute: typeof VijuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/$slug': {
+      id: '/portfolio/$slug'
+      path: '/$slug'
+      fullPath: '/portfolio/$slug'
+      preLoaderRoute: typeof PortfolioSlugRouteImport
+      parentRoute: typeof PortfolioRoute
     }
     '/products/$slug': {
       id: '/products/$slug'
@@ -172,6 +311,18 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface PortfolioRouteChildren {
+  PortfolioSlugRoute: typeof PortfolioSlugRoute
+}
+
+const PortfolioRouteChildren: PortfolioRouteChildren = {
+  PortfolioSlugRoute: PortfolioSlugRoute,
+}
+
+const PortfolioRouteWithChildren = PortfolioRoute._addFileChildren(
+  PortfolioRouteChildren,
+)
 
 interface ProductsRouteChildren {
   ProductsSlugRoute: typeof ProductsSlugRoute
@@ -200,9 +351,15 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ConsultationRoute: ConsultationRoute,
+  ContactRoute: ContactRoute,
+  DeliveryRoute: DeliveryRoute,
+  FaqRoute: FaqRoute,
   PlansRoute: PlansRoute,
+  PortfolioRoute: PortfolioRouteWithChildren,
   ProductsRoute: ProductsRouteWithChildren,
   ServicesRoute: ServicesRouteWithChildren,
+  VijuRoute: VijuRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
