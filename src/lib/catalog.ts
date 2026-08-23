@@ -33,10 +33,13 @@ import sceneOffice from "@/assets/scene-office.jpg";
 import sceneRetail from "@/assets/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
-  logo: logo.url,
-  hero: heroCover.url,
-  poster: brandPoster.url,
-  strip: portfolioStrip.url,
+  // Uploaded asset manifests are not emitted by Vite on Vercel. Keep the
+  // repository-hosted scene assets as safe fallbacks until the originals are
+  // restored as real files in the deployment bundle.
+  logo: sceneOffice,
+  hero: sceneLiving,
+  poster: sceneBedroom,
+  strip: sceneRetail,
   scenes: {
     living: sceneLiving,
     bedroom: sceneBedroom,

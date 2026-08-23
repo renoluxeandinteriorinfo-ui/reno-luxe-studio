@@ -11,10 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccountRouteImport } from './routes/account'
 import { Route as ConsultationRouteImport } from './routes/consultation'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DeliveryRouteImport } from './routes/delivery'
+import { Route as EnquiriesRouteImport } from './routes/enquiries'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FavouritesRouteImport } from './routes/favourites'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as PlansRouteImport } from './routes/plans'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -24,6 +27,8 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VijuRouteImport } from './routes/viju'
+import { Route as VisualizeRouteImport } from './routes/visualize'
+import { Route as ApiGenerateImageRouteImport } from './routes/api/generate-image'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
@@ -36,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsultationRoute = ConsultationRouteImport.update({
@@ -53,9 +63,19 @@ const DeliveryRoute = DeliveryRouteImport.update({
   path: '/delivery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnquiriesRoute = EnquiriesRouteImport.update({
+  id: '/enquiries',
+  path: '/enquiries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavouritesRoute = FavouritesRouteImport.update({
+  id: '/favourites',
+  path: '/favourites',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -103,6 +123,16 @@ const VijuRoute = VijuRouteImport.update({
   path: '/viju',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VisualizeRoute = VisualizeRouteImport.update({
+  id: '/visualize',
+  path: '/visualize',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiGenerateImageRoute = ApiGenerateImageRouteImport.update({
+  id: '/api/generate-image',
+  path: '/api/generate-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioSlugRoute = PortfolioSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -122,10 +152,13 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
+  '/enquiries': typeof EnquiriesRoute
   '/faq': typeof FaqRoute
+  '/favourites': typeof FavouritesRoute
   '/login': typeof LoginRoute
   '/plans': typeof PlansRoute
   '/portfolio': typeof PortfolioRouteWithChildren
@@ -135,6 +168,8 @@ export interface FileRoutesByFullPath {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -142,10 +177,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
+  '/enquiries': typeof EnquiriesRoute
   '/faq': typeof FaqRoute
+  '/favourites': typeof FavouritesRoute
   '/login': typeof LoginRoute
   '/plans': typeof PlansRoute
   '/portfolio': typeof PortfolioRouteWithChildren
@@ -155,6 +193,8 @@ export interface FileRoutesByTo {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -163,10 +203,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/account': typeof AccountRoute
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
   '/delivery': typeof DeliveryRoute
+  '/enquiries': typeof EnquiriesRoute
   '/faq': typeof FaqRoute
+  '/favourites': typeof FavouritesRoute
   '/login': typeof LoginRoute
   '/plans': typeof PlansRoute
   '/portfolio': typeof PortfolioRouteWithChildren
@@ -176,6 +219,8 @@ export interface FileRoutesById {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -185,10 +230,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/account'
     | '/consultation'
     | '/contact'
     | '/delivery'
+    | '/enquiries'
     | '/faq'
+    | '/favourites'
     | '/login'
     | '/plans'
     | '/portfolio'
@@ -198,6 +246,8 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
@@ -205,10 +255,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/account'
     | '/consultation'
     | '/contact'
     | '/delivery'
+    | '/enquiries'
     | '/faq'
+    | '/favourites'
     | '/login'
     | '/plans'
     | '/portfolio'
@@ -218,6 +271,8 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
@@ -225,10 +280,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/account'
     | '/consultation'
     | '/contact'
     | '/delivery'
+    | '/enquiries'
     | '/faq'
+    | '/favourites'
     | '/login'
     | '/plans'
     | '/portfolio'
@@ -238,6 +296,8 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
@@ -246,10 +306,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AccountRoute: typeof AccountRoute
   ConsultationRoute: typeof ConsultationRoute
   ContactRoute: typeof ContactRoute
   DeliveryRoute: typeof DeliveryRoute
+  EnquiriesRoute: typeof EnquiriesRoute
   FaqRoute: typeof FaqRoute
+  FavouritesRoute: typeof FavouritesRoute
   LoginRoute: typeof LoginRoute
   PlansRoute: typeof PlansRoute
   PortfolioRoute: typeof PortfolioRouteWithChildren
@@ -259,6 +322,8 @@ export interface RootRouteChildren {
   SignupRoute: typeof SignupRoute
   TermsRoute: typeof TermsRoute
   VijuRoute: typeof VijuRoute
+  VisualizeRoute: typeof VisualizeRoute
+  ApiGenerateImageRoute: typeof ApiGenerateImageRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -275,6 +340,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/consultation': {
@@ -298,11 +370,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeliveryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enquiries': {
+      id: '/enquiries'
+      path: '/enquiries'
+      fullPath: '/enquiries'
+      preLoaderRoute: typeof EnquiriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favourites': {
+      id: '/favourites'
+      path: '/favourites'
+      fullPath: '/favourites'
+      preLoaderRoute: typeof FavouritesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -368,6 +454,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VijuRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/visualize': {
+      id: '/visualize'
+      path: '/visualize'
+      fullPath: '/visualize'
+      preLoaderRoute: typeof VisualizeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/generate-image': {
+      id: '/api/generate-image'
+      path: '/api/generate-image'
+      fullPath: '/api/generate-image'
+      preLoaderRoute: typeof ApiGenerateImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/portfolio/$slug': {
       id: '/portfolio/$slug'
       path: '/$slug'
@@ -431,10 +531,13 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AccountRoute: AccountRoute,
   ConsultationRoute: ConsultationRoute,
   ContactRoute: ContactRoute,
   DeliveryRoute: DeliveryRoute,
+  EnquiriesRoute: EnquiriesRoute,
   FaqRoute: FaqRoute,
+  FavouritesRoute: FavouritesRoute,
   LoginRoute: LoginRoute,
   PlansRoute: PlansRoute,
   PortfolioRoute: PortfolioRouteWithChildren,
@@ -444,6 +547,8 @@ const rootRouteChildren: RootRouteChildren = {
   SignupRoute: SignupRoute,
   TermsRoute: TermsRoute,
   VijuRoute: VijuRoute,
+  VisualizeRoute: VisualizeRoute,
+  ApiGenerateImageRoute: ApiGenerateImageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
