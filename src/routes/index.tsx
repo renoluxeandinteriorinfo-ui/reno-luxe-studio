@@ -36,11 +36,11 @@ const HIGHLIGHTS = [
 function Home() {
   return (
     <>
-      <section className="relative isolate min-h-[88vh] overflow-hidden">
+      <section className="relative isolate min-h-[72vh] overflow-hidden bg-background sm:min-h-[78vh]">
         <img
           src={BRAND_IMAGES.hero}
           alt="Luxury interior styled by Reno Luxe & Interior"
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-y-0 right-0 h-full w-full object-contain object-top opacity-35 sm:w-1/2 sm:object-right sm:opacity-100"
         />
         <div className="absolute inset-0 bg-[image:var(--gradient-veil)]" />
         <div className="relative mx-auto flex min-h-[88vh] w-full max-w-6xl flex-col justify-end px-5 pt-28 pb-16 sm:px-8 md:justify-center md:pb-24">
