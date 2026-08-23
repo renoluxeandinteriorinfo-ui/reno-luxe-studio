@@ -1,4 +1,7 @@
 import { useMemo, useState } from "react";
+
+const PRODUCT_CATALOGUE_FALLBACK =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.45%20PM-MrEKleDRPXOV9ld5Perx9YlaXTzdFG.jpeg";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -86,15 +89,16 @@ function Products() {
               />
               <Link to="/products/$slug" params={{ slug: product.slug }}>
                 <img
-                  src={product.image}
+                  src={product.image || PRODUCT_CATALOGUE_FALLBACK}
                   alt={`${product.name} product image`}
                   className="aspect-square w-full bg-muted object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   onError={(event) => {
                     const image = event.currentTarget;
-                    image.onerror = null;
-                    image.src =
-                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.45%20PM-MrEKleDRPXOV9ld5Perx9YlaXTzdFG.jpeg";
+                    if (image.src === PRODUCT_CATALOGUE_FALLBACK) return;
+                    image.src = PRODUCT_CATALOGUE_FALLBACK;
                   }}
                 />
                 <div className="p-4">
