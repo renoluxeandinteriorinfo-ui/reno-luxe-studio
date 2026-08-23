@@ -87,9 +87,15 @@ function Products() {
               <Link to="/products/$slug" params={{ slug: product.slug }}>
                 <img
                   src={product.image}
-                  alt={product.name}
-                  className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  alt={`${product.name} product image`}
+                  className="aspect-square w-full bg-muted object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  onError={(event) => {
+                    const image = event.currentTarget;
+                    image.onerror = null;
+                    image.src =
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.45%20PM-MrEKleDRPXOV9ld5Perx9YlaXTzdFG.jpeg";
+                  }}
                 />
                 <div className="p-4">
                   <p className="overline text-primary">{product.category}</p>
