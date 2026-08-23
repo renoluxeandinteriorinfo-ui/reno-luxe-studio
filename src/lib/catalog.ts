@@ -547,3 +547,11 @@ export const PORTFOLIO_CATEGORIES = [
 export function getProject(slug: string) {
   return PORTFOLIO.find((x) => x.slug === slug);
 }
+
+export function getServiceBySlug(slug: string) {
+  return SERVICES.find((x) => x.slug === slug);
+}
+
+export function getPackage(slug: string) {
+  return PACKAGES.find((x) => x.slug === slug);
+}
