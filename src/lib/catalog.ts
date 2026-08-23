@@ -33,13 +33,12 @@ import sceneOffice from "@/assets/scene-office.jpg";
 import sceneRetail from "@/assets/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
-  // Uploaded asset manifests are not emitted by Vite on Vercel. Keep the
-  // repository-hosted scene assets as safe fallbacks until the originals are
-  // restored as real files in the deployment bundle.
-  logo: sceneOffice,
-  hero: sceneLiving,
-  poster: sceneBedroom,
-  strip: sceneRetail,
+  // The current official mark supplied by Reno Luxe & Interior.
+  logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%207.21.40%20PM-an3vTrBKNRL95W6unO5sZ471wKJTUa.jpeg",
+  hero: heroCover.url,
+  cover: heroCover.url,
+  poster: brandPoster.url,
+  strip: portfolioStrip.url,
   scenes: {
     living: sceneLiving,
     bedroom: sceneBedroom,
