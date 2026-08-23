@@ -22,10 +22,10 @@ import viju2 from "@/assets/viju-2.jpg.asset.json";
 import viju3 from "@/assets/viju-3.jpg.asset.json";
 import viju4 from "@/assets/viju-4.jpg.asset.json";
 
-import heroCover from "@/assets/hero-cover.jpg.asset.json";
 import brandPoster from "@/assets/brand-poster.jpg.asset.json";
 import portfolioStrip from "@/assets/portfolio-strip.jpg.asset.json";
 import logo from "@/assets/reno-luxe-logo.jpg.asset.json";
+import uploadedCover from "@/assets/reno-luxe-cover-upload.jpeg";
 
 import sceneLiving from "@/assets/scene-living.jpg";
 import sceneBedroom from "@/assets/scene-bedroom.jpg";
@@ -35,8 +35,8 @@ import sceneRetail from "@/assets/scene-retail.jpg";
 export const BRAND_IMAGES = {
   // The current official mark supplied by Reno Luxe & Interior.
   logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%207.21.40%20PM-an3vTrBKNRL95W6unO5sZ471wKJTUa.jpeg",
-  hero: heroCover.url,
-  cover: heroCover.url,
+  hero: uploadedCover,
+  cover: uploadedCover,
   poster: brandPoster.url,
   strip: portfolioStrip.url,
   scenes: {
@@ -459,8 +459,8 @@ export const PORTFOLIO: PortfolioItem[] = [
       "Keep the palette quiet, let texture carry the interest, and use one strong sculptural piece as the anchor of the seating arrangement.",
     services: ["Interior Design & Styling", "Premium Furniture & Décor", "Space Planning & Layout"],
     pieces: ["Center Tables", "Plastic Vase Flowers", "Frames"],
-    cover: heroCover.url,
-    gallery: [heroCover.url, brandPoster.url],
+    cover: uploadedCover,
+    gallery: [uploadedCover, brandPoster.url],
     concept: false,
   },
   {
