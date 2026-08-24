@@ -17,10 +17,13 @@ const figurines = "/images/products/figurines.jpeg";
 const plasticVase = "/images/products/plastic-vase-flowers.jpeg";
 const mirror = "/images/products/mirror.jpeg";
 
-import viju1 from "@/assets/viju-1.jpg.asset.json";
-import viju2 from "@/assets/viju-2.jpg.asset.json";
-import viju3 from "@/assets/viju-3.jpg.asset.json";
-import viju4 from "@/assets/viju-4.jpg.asset.json";
+const vijuRange = "/images/viju/viju-range.jpeg";
+const vijuFamily = "/images/viju/viju-family.jpeg";
+const vijuMilk = "/images/viju/viju-milk.jpeg";
+const vijuAssorted = "/images/viju/viju-assorted.jpeg";
+const heroCover = "/images/brand/hero-poster.jpeg";
+const brandPoster = "/images/brand/hero-poster.jpeg";
+const portfolioStrip = "/images/portfolio/dining-room.jpeg";
 
 import sceneLiving from "@/assets/scene-living.jpg";
 import sceneBedroom from "@/assets/scene-bedroom.jpg";
@@ -253,25 +256,25 @@ export const VIJU_ITEMS: VijuItem[] = [
     slug: "viju-range",
     name: "Viju Full Product Range",
     note: "Assorted drinks, milk, yoghurt and water range as shown.",
-    image: viju2.url,
+    image: vijuRange,
   },
   {
     slug: "viju-milk-drinks",
     name: "Viju Milk Drinks Selection",
     note: "Chocolate, malt, wheat and baked yoghurt drinks.",
-    image: viju1.url,
+    image: vijuMilk,
   },
   {
     slug: "viju-family-choice",
     name: "Viju Family Selection",
     note: "Mixed flavours including wheat, chocolate, apple and orange.",
-    image: viju4.url,
+    image: vijuFamily,
   },
   {
     slug: "viju-assorted",
     name: "Viju Assorted Cartons & Bottles",
     note: "Bottled and carton formats for bulk purchase.",
-    image: viju3.url,
+    image: vijuAssorted,
   },
 ];
 
