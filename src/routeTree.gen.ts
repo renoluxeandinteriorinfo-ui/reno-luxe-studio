@@ -27,6 +27,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VijuRouteImport } from './routes/viju'
 import { Route as VisualizeRouteImport } from './routes/visualize'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
+import { Route as AuthenticatedFavouritesRouteImport } from './routes/_authenticated/favourites'
 import { Route as ApiGenerateImageRouteImport } from './routes/api/generate-image'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
@@ -121,6 +122,11 @@ const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
   path: '/account',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedFavouritesRoute = AuthenticatedFavouritesRouteImport.update({
+  id: '/favourites',
+  path: '/favourites',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const ApiGenerateImageRoute = ApiGenerateImageRouteImport.update({
   id: '/api/generate-image',
   path: '/api/generate-image',
@@ -160,6 +166,7 @@ export interface FileRoutesByFullPath {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
@@ -183,6 +190,7 @@ export interface FileRoutesByTo {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
@@ -208,6 +216,7 @@ export interface FileRoutesById {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
+  '/_authenticated/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
@@ -233,6 +242,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/account'
+    | '/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
@@ -256,6 +266,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/account'
+    | '/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
@@ -280,6 +291,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/_authenticated/account'
+    | '/_authenticated/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
@@ -435,6 +447,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAccountRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/favourites': {
+      id: '/_authenticated/favourites'
+      path: '/favourites'
+      fullPath: '/favourites'
+      preLoaderRoute: typeof AuthenticatedFavouritesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/api/generate-image': {
       id: '/api/generate-image'
       path: '/api/generate-image'
@@ -468,10 +487,12 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
+  AuthenticatedFavouritesRoute: typeof AuthenticatedFavouritesRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAccountRoute: AuthenticatedAccountRoute,
+  AuthenticatedFavouritesRoute: AuthenticatedFavouritesRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
