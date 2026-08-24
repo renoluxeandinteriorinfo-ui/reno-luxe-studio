@@ -174,7 +174,10 @@ function Visualize() {
                   <MessageCircle /> Make this real
                 </Button>
                 <Button asChild variant="outline">
-                  <a href={image} download={`reno-luxe-${space.toLowerCase().replace(/\s+/g, "-")}.png`}>
+                  <a
+                    href={image}
+                    download={`reno-luxe-${space.toLowerCase().replace(/\s+/g, "-")}.png`}
+                  >
                     <Download /> Download
                   </a>
                 </Button>

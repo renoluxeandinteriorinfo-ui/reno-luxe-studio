@@ -85,10 +85,12 @@ function Plans() {
           description={active.intro}
           notesLabel="Tell us about your space"
           emailSubject={`Package enquiry — ${active.title}`}
-          buildLines={(values) => [
-            `I am interested in the "${active.title}" package.`,
-            values.notes ? `About my space: ${values.notes}` : "",
-          ].filter(Boolean)}
+          buildLines={(values) =>
+            [
+              `I am interested in the "${active.title}" package.`,
+              values.notes ? `About my space: ${values.notes}` : "",
+            ].filter(Boolean)
+          }
         />
       ) : null}
     </>

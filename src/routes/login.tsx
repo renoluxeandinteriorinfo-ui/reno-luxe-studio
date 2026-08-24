@@ -13,7 +13,10 @@ import { pageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/login")({
   head: () =>
-    pageMeta("Sign In", "Sign in to your Reno Luxe & Interior account to track enquiries and saved favourites."),
+    pageMeta(
+      "Sign In",
+      "Sign in to your Reno Luxe & Interior account to track enquiries and saved favourites.",
+    ),
   component: Login,
 });
 

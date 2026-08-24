@@ -19,7 +19,14 @@ export const Route = createFileRoute("/consultation")({
   component: Consultation,
 });
 
-const SPACE_TYPES = ["Apartment", "Duplex / House", "Office", "Retail / Hospitality", "Single room", "Other"];
+const SPACE_TYPES = [
+  "Apartment",
+  "Duplex / House",
+  "Office",
+  "Retail / Hospitality",
+  "Single room",
+  "Other",
+];
 
 function Consultation() {
   const [open, setOpen] = useState(false);
@@ -58,7 +65,12 @@ function Consultation() {
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="date">Preferred date</Label>
-                <Input id="date" type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+                <Input
+                  id="date"
+                  type="date"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="budget">Budget range (optional)</Label>
@@ -79,9 +91,18 @@ function Consultation() {
             <h2 className="font-display text-2xl">What happens next</h2>
             <ol className="mt-5 grid gap-4">
               {[
-                ["We confirm your slot", "We reply on WhatsApp or by email to confirm the date and time."],
-                ["We review your space", "Photos, measurements or a walkthrough — whichever suits you."],
-                ["We propose a direction", "Scope, design direction and the right package for your project."],
+                [
+                  "We confirm your slot",
+                  "We reply on WhatsApp or by email to confirm the date and time.",
+                ],
+                [
+                  "We review your space",
+                  "Photos, measurements or a walkthrough — whichever suits you.",
+                ],
+                [
+                  "We propose a direction",
+                  "Scope, design direction and the right package for your project.",
+                ],
               ].map(([title, text], index) => (
                 <li key={title} className="card-luxe flex gap-4 p-5">
                   <span className="font-display text-2xl text-primary">0{index + 1}</span>

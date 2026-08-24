@@ -17,9 +17,21 @@ export const Route = createFileRoute("/viju")({
 });
 
 const POINTS = [
-  { icon: PackageCheck, title: "Bulk quantities", text: "Cartons and pallets for retailers, events and offices." },
-  { icon: Truck, title: "Delivery arranged", text: "Delivery is arranged per order, based on quantity and destination." },
-  { icon: Users, title: "Trade & retail", text: "Supply for shops, distributors, caterers and corporate buyers." },
+  {
+    icon: PackageCheck,
+    title: "Bulk quantities",
+    text: "Cartons and pallets for retailers, events and offices.",
+  },
+  {
+    icon: Truck,
+    title: "Delivery arranged",
+    text: "Delivery is arranged per order, based on quantity and destination.",
+  },
+  {
+    icon: Users,
+    title: "Trade & retail",
+    text: "Supply for shops, distributors, caterers and corporate buyers.",
+  },
 ];
 
 function Viju() {

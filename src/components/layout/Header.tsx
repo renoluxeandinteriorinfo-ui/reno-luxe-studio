@@ -95,21 +95,24 @@ export function Header() {
                 <Brand />
               </div>
               <nav className="mt-6 grid gap-1 px-3 pb-24">
-                {[...NAV_LINKS, { to: "/consultation", label: "Consultation" }, { to: "/delivery", label: "Delivery" }, { to: "/faq", label: "FAQ" }].map(
-                  (link) => (
-                    <Link
-                      key={link.to}
-                      to={link.to}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "rounded-sm px-4 py-3 text-sm tracking-wide text-muted-foreground transition-colors hover:bg-secondary hover:text-primary",
-                        pathname === link.to && "bg-secondary text-primary",
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ),
-                )}
+                {[
+                  ...NAV_LINKS,
+                  { to: "/consultation", label: "Consultation" },
+                  { to: "/delivery", label: "Delivery" },
+                  { to: "/faq", label: "FAQ" },
+                ].map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "rounded-sm px-4 py-3 text-sm tracking-wide text-muted-foreground transition-colors hover:bg-secondary hover:text-primary",
+                      pathname === link.to && "bg-secondary text-primary",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
                 <div className="hairline my-3" />
                 <Link
                   to={user ? "/account" : "/login"}

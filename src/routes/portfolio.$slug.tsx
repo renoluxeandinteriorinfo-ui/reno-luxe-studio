@@ -120,10 +120,12 @@ function ProjectDetail() {
         description="Tell us about your space and we'll adapt this direction."
         notesLabel="Tell us about your space"
         emailSubject={`Project enquiry — ${project.name}`}
-        buildLines={(values) => [
-          `I would like a project similar to "${project.name}" from your portfolio.`,
-          values.notes ? `About my space: ${values.notes}` : "",
-        ].filter(Boolean)}
+        buildLines={(values) =>
+          [
+            `I would like a project similar to "${project.name}" from your portfolio.`,
+            values.notes ? `About my space: ${values.notes}` : "",
+          ].filter(Boolean)
+        }
       />
     </>
   );

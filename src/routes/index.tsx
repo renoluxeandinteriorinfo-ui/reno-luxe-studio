@@ -238,9 +238,7 @@ function Home() {
       <Section className="border-t border-border">
         <div className="card-luxe grid gap-6 p-8 text-center md:p-14">
           <p className="overline text-primary">Start your project</p>
-          <h2 className="font-display text-3xl sm:text-5xl">
-            Tell us about your space
-          </h2>
+          <h2 className="font-display text-3xl sm:text-5xl">Tell us about your space</h2>
           <p className="mx-auto max-w-xl text-sm leading-relaxed text-muted-foreground">
             Send us a message on WhatsApp or by email. We reply {SITE.hours.toLowerCase()}.
           </p>

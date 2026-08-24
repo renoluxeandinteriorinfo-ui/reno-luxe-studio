@@ -28,7 +28,12 @@ function ServiceDetail() {
 
   return (
     <>
-      <PageHero overline="Service" title={service.title} lead={service.summary} image={service.image} />
+      <PageHero
+        overline="Service"
+        title={service.title}
+        lead={service.summary}
+        image={service.image}
+      />
 
       <Section>
         <Button asChild variant="ghost" className="mb-8 -ml-3">
@@ -88,10 +93,12 @@ function ServiceDetail() {
         description="Share your details and we'll get straight back to you."
         notesLabel="Tell us about your space"
         emailSubject={`Service request — ${service.title}`}
-        buildLines={(values) => [
-          `I would like to request the following service: ${service.title}.`,
-          values.notes ? `About my space: ${values.notes}` : "",
-        ].filter(Boolean)}
+        buildLines={(values) =>
+          [
+            `I would like to request the following service: ${service.title}.`,
+            values.notes ? `About my space: ${values.notes}` : "",
+          ].filter(Boolean)
+        }
       />
     </>
   );

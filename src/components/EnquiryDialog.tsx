@@ -136,7 +136,11 @@ export function EnquiryDialog({
       city: values.city,
       area: values.area,
       message,
-      details: { channel, quantity: withQuantity ? values.quantity : undefined, notes: values.notes },
+      details: {
+        channel,
+        quantity: withQuantity ? values.quantity : undefined,
+        notes: values.notes,
+      },
     });
 
     if (channel === "whatsapp") openWhatsApp(message);
@@ -163,7 +167,12 @@ export function EnquiryDialog({
           {extra}
           <div className="grid gap-2">
             <Label htmlFor="eq-name">Full name *</Label>
-            <Input id="eq-name" value={values.name} onChange={set("name")} placeholder="Your name" />
+            <Input
+              id="eq-name"
+              value={values.name}
+              onChange={set("name")}
+              placeholder="Your name"
+            />
           </div>
           {withQuantity ? (
             <div className="grid gap-2">
@@ -180,7 +189,12 @@ export function EnquiryDialog({
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="grid gap-2">
               <Label htmlFor="eq-country">Country *</Label>
-              <Input id="eq-country" value={values.country} onChange={set("country")} placeholder="Nigeria" />
+              <Input
+                id="eq-country"
+                value={values.country}
+                onChange={set("country")}
+                placeholder="Nigeria"
+              />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="eq-city">City *</Label>
@@ -189,7 +203,12 @@ export function EnquiryDialog({
           </div>
           <div className="grid gap-2">
             <Label htmlFor="eq-area">Area</Label>
-            <Input id="eq-area" value={values.area} onChange={set("area")} placeholder="Lekki Phase 1" />
+            <Input
+              id="eq-area"
+              value={values.area}
+              onChange={set("area")}
+              placeholder="Lekki Phase 1"
+            />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="grid gap-2">
@@ -213,11 +232,7 @@ export function EnquiryDialog({
 
         <div className="mt-2 grid gap-3 sm:grid-cols-2">
           <Button onClick={() => submit("whatsapp")} disabled={busy !== null}>
-            {busy === "whatsapp" ? (
-              <Loader2 className="animate-spin" />
-            ) : (
-              <MessageCircle />
-            )}
+            {busy === "whatsapp" ? <Loader2 className="animate-spin" /> : <MessageCircle />}
             Send on WhatsApp
           </Button>
           <Button variant="outline" onClick={() => submit("email")} disabled={busy !== null}>

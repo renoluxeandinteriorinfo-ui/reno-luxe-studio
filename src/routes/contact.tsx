@@ -91,8 +91,8 @@ function Contact() {
           <div className="card-luxe p-7">
             <h2 className="font-display text-2xl">Send an enquiry</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Fill in your details and choose whether to send it through WhatsApp or email. If you're
-              signed in, the enquiry is saved to your account so you can track it.
+              Fill in your details and choose whether to send it through WhatsApp or email. If
+              you're signed in, the enquiry is saved to your account so you can track it.
             </p>
             <Button size="lg" className="mt-6 w-full" onClick={() => setOpen(true)}>
               <MessageCircle /> Start an enquiry
@@ -114,9 +114,10 @@ function Contact() {
         notesLabel="Your message"
         emailSubject="Website enquiry"
         buildLines={(values) =>
-          ["I would like to make an enquiry.", values.notes ? `Message: ${values.notes}` : ""].filter(
-            Boolean,
-          )
+          [
+            "I would like to make an enquiry.",
+            values.notes ? `Message: ${values.notes}` : "",
+          ].filter(Boolean)
         }
       />
     </>

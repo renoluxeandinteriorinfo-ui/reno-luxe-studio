@@ -16,10 +16,26 @@ export const Route = createFileRoute("/about")({
 });
 
 const VALUES = [
-  { icon: Gem, title: "Luxury", text: "Considered materials, finishes and detailing in every scheme." },
-  { icon: Ruler, title: "Precision", text: "Space planning and execution handled with care and accuracy." },
-  { icon: HeartHandshake, title: "Service", text: "Clear communication from first enquiry to final styling." },
-  { icon: BadgeCheck, title: "Quality", text: "Products and workmanship selected to last, not just to look good." },
+  {
+    icon: Gem,
+    title: "Luxury",
+    text: "Considered materials, finishes and detailing in every scheme.",
+  },
+  {
+    icon: Ruler,
+    title: "Precision",
+    text: "Space planning and execution handled with care and accuracy.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Service",
+    text: "Clear communication from first enquiry to final styling.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Quality",
+    text: "Products and workmanship selected to last, not just to look good.",
+  },
 ];
 
 function About() {

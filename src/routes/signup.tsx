@@ -78,8 +78,8 @@ function Signup() {
 
         {sent ? (
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-            We've sent a confirmation link to <span className="text-foreground">{email}</span>. Click
-            it to activate your account, then sign in.
+            We've sent a confirmation link to <span className="text-foreground">{email}</span>.
+            Click it to activate your account, then sign in.
           </p>
         ) : (
           <>

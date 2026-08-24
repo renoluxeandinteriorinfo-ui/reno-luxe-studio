@@ -1,5 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Clock, Globe, Instagram, Mail, MessageCircle, Music2, Phone, Facebook } from "lucide-react";
+import {
+  Clock,
+  Globe,
+  Instagram,
+  Mail,
+  MessageCircle,
+  Music2,
+  Phone,
+  Facebook,
+} from "lucide-react";
 import { Brand } from "@/components/layout/Header";
 import { SITE, whatsappLink } from "@/lib/site";
 

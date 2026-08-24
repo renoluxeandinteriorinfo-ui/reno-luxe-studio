@@ -14,7 +14,9 @@ export async function streamImage(
   });
 
   if (!res.ok || !res.body) {
-    throw new Error((await res.text().catch(() => "")) || `Image generation failed (${res.status})`);
+    throw new Error(
+      (await res.text().catch(() => "")) || `Image generation failed (${res.status})`,
+    );
   }
 
   const reader = res.body.getReader();
@@ -34,7 +36,8 @@ export async function streamImage(
     const b64 =
       (payload["b64_json"] as string | undefined) ??
       (payload["image"] as string | undefined) ??
-      ((payload["data"] as { b64_json?: string }[] | undefined)?.[0]?.b64_json ?? undefined);
+      (payload["data"] as { b64_json?: string }[] | undefined)?.[0]?.b64_json ??
+      undefined;
     if (!b64) return;
     events += 1;
     onFrame(`data:image/png;base64,${b64}`, type.endsWith("completed") || type === "");

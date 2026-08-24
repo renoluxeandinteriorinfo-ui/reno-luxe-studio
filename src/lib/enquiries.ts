@@ -1,14 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 
 export type EnquiryKind =
-  | "product"
-  | "project"
-  | "consultation"
-  | "package"
-  | "service"
-  | "custom"
-  | "viju"
-  | "general";
+  "product" | "project" | "consultation" | "package" | "service" | "custom" | "viju" | "general";
 
 export type EnquiryInput = {
   kind: EnquiryKind;
