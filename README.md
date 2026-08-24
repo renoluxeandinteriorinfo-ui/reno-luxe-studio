@@ -851,9 +851,7 @@ Label AI concepts appropriately.
 
 ================
 
-This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d4b12785-b637-49fe-a90c-548b5829748f).
 
