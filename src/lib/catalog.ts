@@ -1,31 +1,26 @@
 import goldcurl from "@/assets/goldcurl-ornaments.jpg.asset.json";
 import acrylic from "@/assets/acrylic-wall-sculpture.jpg.asset.json";
 import standingLamps from "@/assets/standing-lamps.jpg.asset.json";
-import centerTables from "@/assets/center-tables.jpg.asset.json";
 import centerTables2 from "@/assets/center-tables-2.jpg.asset.json";
 import sideStool from "@/assets/side-stool.jpg.asset.json";
 import tripod from "@/assets/tripod-flame-aroma.jpg.asset.json";
-import figurines from "@/assets/figurines.jpg.asset.json";
 import figurines2 from "@/assets/figurines-2.jpg.asset.json";
 import foreignCouch from "@/assets/foreign-couch.jpg.asset.json";
-import fancyChairs from "@/assets/fancy-chairs.jpg.asset.json";
-import kaws from "@/assets/kaws.jpg.asset.json";
-import visualizationLamp from "@/assets/visualization-lamp.jpg.asset.json";
-import backMan from "@/assets/back-man-figurines.jpg.asset.json";
-import swingChairs from "@/assets/swing-chairs.jpg.asset.json";
-import frames from "@/assets/frames.jpg.asset.json";
-import plasticVase from "@/assets/plastic-vase-flowers.jpg.asset.json";
-import mirror from "@/assets/mirror.jpg.asset.json";
+const backMan = "/images/products/back-man-figurines.jpeg";
+const fancyChairs = "/images/products/fancy-chairs.jpeg";
+const kaws = "/images/products/kaws.jpeg";
+const visualizationLamp = "/images/products/visualization-lamp.jpeg";
+const swingChairs = "/images/products/swing-chairs.jpeg";
+const frames = "/images/products/frames.jpeg";
+const centerTables = "/images/products/center-tables.jpeg";
+const figurines = "/images/products/figurines.jpeg";
+const plasticVase = "/images/products/plastic-vase-flowers.jpeg";
+const mirror = "/images/products/mirror.jpeg";
 
 import viju1 from "@/assets/viju-1.jpg.asset.json";
 import viju2 from "@/assets/viju-2.jpg.asset.json";
 import viju3 from "@/assets/viju-3.jpg.asset.json";
 import viju4 from "@/assets/viju-4.jpg.asset.json";
-
-import heroCover from "@/assets/hero-cover.jpg.asset.json";
-import brandPoster from "@/assets/brand-poster.jpg.asset.json";
-import portfolioStrip from "@/assets/portfolio-strip.jpg.asset.json";
-import logo from "@/assets/reno-luxe-logo.jpg.asset.json";
 
 import sceneLiving from "@/assets/scene-living.jpg";
 import sceneBedroom from "@/assets/scene-bedroom.jpg";
@@ -33,10 +28,10 @@ import sceneOffice from "@/assets/scene-office.jpg";
 import sceneRetail from "@/assets/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
-  logo: logo.url,
-  hero: heroCover.url,
-  poster: brandPoster.url,
-  strip: portfolioStrip.url,
+  logo: "/images/brand/logo.jpeg",
+  hero: "/images/portfolio/living-room-lighting.jpeg",
+  poster: "/images/brand/hero-poster.jpeg",
+  strip: "/images/portfolio/dining-room.jpeg",
   scenes: {
     living: sceneLiving,
     bedroom: sceneBedroom,
