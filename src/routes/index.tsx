@@ -40,7 +40,7 @@ function Home() {
         <img
           src={BRAND_IMAGES.hero}
           alt="Luxury interior styled by Reno Luxe & Interior"
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full bg-background object-contain object-center"
         />
         <div className="absolute inset-0 bg-[image:var(--gradient-veil)]" />
         <div className="relative mx-auto flex min-h-[88vh] w-full max-w-6xl flex-col justify-end px-5 pt-28 pb-16 sm:px-8 md:justify-center md:pb-24">
@@ -161,7 +161,7 @@ function Home() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="aspect-square w-full bg-muted object-contain p-2 transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="p-4">

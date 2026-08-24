@@ -32,8 +32,8 @@ import sceneRetail from "@/assets/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
   logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%207.21.40%20PM-kHHfyT8yfTt0e2Tnk554Wqj6V3a6as.jpeg",
-  hero: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.47%20PM-amASDeHCpDmc6JHtmX3ro98ON9matb.jpeg",
-  poster: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.47%20PM-amASDeHCpDmc6JHtmX3ro98ON9matb.jpeg",
+  hero: heroCover,
+  poster: brandPoster,
   strip: "/images/portfolio/dining-room.jpeg",
   scenes: {
     living: sceneLiving,
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     "Furniture",
     "Curved contemporary couch for modern living rooms.",
     "A soft, curved couch designed for contemporary living spaces. Ideal as the anchor piece of a living room scheme. Fabric, size and configuration options are confirmed during enquiry.",
-    "/images/portfolio/living-room-lighting.jpeg",
+    sceneLiving,
     "professional",
   ),
   p(
@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculptural gold curl ornaments on a base.",
     "A pair of sculptural gold-toned curl ornaments mounted on display bases. Ideal for console tables, shelving and centre tables.",
-    kaws,
+    figurines,
     "diy",
   ),
   p(
@@ -335,7 +335,7 @@ export const SERVICES: Service[] = [
     detail:
       "The finishing layer of a room. Browse the catalogue or tell us the look you want and we will suggest pieces that fit the space.",
     points: ["Mirrors & wall décor", "Figurines & sculptures", "Vases & florals", "Lamps & accent furniture"],
-    image: figurines,
+    image: sceneOffice,
   },
   {
     slug: "3d-interior-visualization",

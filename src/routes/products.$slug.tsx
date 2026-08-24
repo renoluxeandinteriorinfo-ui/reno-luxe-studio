@@ -58,7 +58,7 @@ function ProductDetail() {
             <img
               src={product.gallery[active] ?? product.image}
               alt={product.name}
-              className="w-full rounded-sm border border-border object-cover shadow-luxe"
+              className="w-full rounded-sm border border-border bg-muted object-contain p-2 shadow-luxe"
             />
             {product.gallery.length > 1 ? (
               <div className="mt-3 flex gap-3">
@@ -72,7 +72,7 @@ function ProductDetail() {
                       index === active ? "border-primary" : "border-border"
                     }`}
                   >
-                    <img src={image} alt="" className="size-full object-cover" />
+                    <img src={image} alt="" className="size-full bg-muted object-contain p-1" />
                   </button>
                 ))}
               </div>
@@ -131,7 +131,7 @@ function ProductDetail() {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="aspect-square w-full bg-muted object-contain p-2 transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="p-4 text-sm">{item.name}</div>

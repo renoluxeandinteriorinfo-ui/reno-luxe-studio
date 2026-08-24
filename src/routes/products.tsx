@@ -88,16 +88,9 @@ function Products() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="aspect-square w-full bg-muted object-contain p-2 transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="p-4">
-                  <p className="overline text-primary">{product.category}</p>
-                  <h2 className="mt-1 text-sm">{product.name}</h2>
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
-                    {product.short}
-                  </p>
-                </div>
               </Link>
             </article>
           ))}
