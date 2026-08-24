@@ -31,9 +31,9 @@ import sceneOffice from "@/assets/scene-office.jpg";
 import sceneRetail from "@/assets/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
-  logo: "/images/brand/logo.jpeg",
-  hero: "/images/portfolio/living-room-lighting.jpeg",
-  poster: "/images/brand/hero-poster.jpeg",
+  logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%207.21.40%20PM-kHHfyT8yfTt0e2Tnk554Wqj6V3a6as.jpeg",
+  hero: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.47%20PM-amASDeHCpDmc6JHtmX3ro98ON9matb.jpeg",
+  poster: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%2010.00.47%20PM-amASDeHCpDmc6JHtmX3ro98ON9matb.jpeg",
   strip: "/images/portfolio/dining-room.jpeg",
   scenes: {
     living: sceneLiving,
@@ -81,7 +81,7 @@ export const PRODUCTS: Product[] = [
     "Chairs",
     "Suspended egg-style swing seating with cushioning.",
     "Statement swing seating with a supporting frame and padded cushion. A sculptural addition to a lounge, balcony, reading corner or reception area. Colours and cushion options are confirmed on enquiry.",
-    swingChairs.url,
+    swingChairs,
     "professional",
   ),
   p(
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     "Furniture",
     "Curved contemporary couch for modern living rooms.",
     "A soft, curved couch designed for contemporary living spaces. Ideal as the anchor piece of a living room scheme. Fabric, size and configuration options are confirmed during enquiry.",
-    foreignCouch.url,
+    "/images/portfolio/living-room-lighting.jpeg",
     "professional",
   ),
   p(
@@ -99,7 +99,7 @@ export const PRODUCTS: Product[] = [
     "Chairs",
     "Upholstered accent and dining chairs.",
     "Upholstered accent chairs suitable for dining rooms, offices and lounges. Available in a selection of finishes — current options are confirmed on enquiry.",
-    fancyChairs.url,
+    fancyChairs,
   ),
   p(
     "center-tables",
@@ -107,9 +107,9 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Round marble-top centre table with gold frame.",
     "A round centre table with a light stone-look top and a metal frame. Designed to sit at the heart of a living room arrangement.",
-    centerTables.url,
+    centerTables,
     "diy",
-    [centerTables2.url],
+    [centerTables],
   ),
   p(
     "center-table-dark",
@@ -117,7 +117,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Low-profile dark timber centre table.",
     "A low, rectangular centre table in a dark timber finish. Pairs well with neutral upholstery and warm lighting.",
-    centerTables2.url,
+    centerTables,
     "diy",
   ),
   p(
@@ -126,7 +126,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Two-tier round side stool.",
     "A compact two-tier side stool for beside a sofa or bed. Useful as an extra surface with additional display space below.",
-    sideStool.url,
+    centerTables,
     "diy",
   ),
   p(
@@ -135,7 +135,7 @@ export const PRODUCTS: Product[] = [
     "Lighting",
     "Arched floor lamp for ambient lighting.",
     "An arched standing lamp that delivers soft ambient light over a seating area. A simple way to add layered lighting to a room.",
-    standingLamps.url,
+    visualizationLamp,
     "diy",
   ),
   p(
@@ -144,7 +144,7 @@ export const PRODUCTS: Product[] = [
     "Lighting",
     "Illuminated acrylic display lamp.",
     "An illuminated display lamp with an engraved acrylic panel. Works as a bedside, desk or shelf accent light.",
-    visualizationLamp.url,
+    visualizationLamp,
     "diy",
   ),
   p(
@@ -153,7 +153,7 @@ export const PRODUCTS: Product[] = [
     "Accessories",
     "Aroma diffuser with dynamic light effects.",
     "An aroma diffuser with adjustable light effects and remote control. Adds scent and soft colour to bedrooms, lounges and studios.",
-    tripod.url,
+    visualizationLamp,
     "diy",
   ),
   p(
@@ -162,7 +162,7 @@ export const PRODUCTS: Product[] = [
     "Mirrors",
     "Arched and framed decorative mirrors.",
     "Decorative mirrors in arched and framed profiles. Mirrors open up a space visually and reflect light through a room. Sizes and frame finishes are confirmed on enquiry.",
-    mirror.url,
+    mirror,
     "professional",
   ),
   p(
@@ -171,7 +171,7 @@ export const PRODUCTS: Product[] = [
     "Wall Décor",
     "Layered acrylic scenic wall piece.",
     "A layered acrylic wall sculpture with a scenic composition. Designed as a focal wall piece for a living room, hallway or reception.",
-    acrylic.url,
+    frames,
     "professional",
   ),
   p(
@@ -180,7 +180,7 @@ export const PRODUCTS: Product[] = [
     "Wall Décor",
     "Framed wall art and lettering pieces.",
     "Framed art and lettering pieces for gallery walls and feature walls. Custom wording and framing options are discussed on enquiry.",
-    frames.url,
+    frames,
     "diy",
   ),
   p(
@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculptural gold curl ornaments on a base.",
     "A pair of sculptural gold-toned curl ornaments mounted on display bases. Ideal for console tables, shelving and centre tables.",
-    goldcurl.url,
+    kaws,
     "diy",
   ),
   p(
@@ -198,9 +198,9 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Curated decorative figurines collection.",
     "A curated selection of decorative figurines in mixed finishes for shelves, consoles and display units. Available pieces vary — current stock is confirmed on enquiry.",
-    figurines.url,
+    figurines,
     "diy",
-    [figurines2.url],
+    [figurines],
   ),
   p(
     "back-man-figurines",
@@ -208,7 +208,7 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Musician-style character figurines pair.",
     "A pair of character figurines with a musical theme. A playful, contemporary accent for a shelf or media unit.",
-    backMan.url,
+    backMan,
     "diy",
   ),
   p(
@@ -217,7 +217,7 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Contemporary collectible-style figures.",
     "Contemporary collectible-style figures for modern and art-led interiors. Sizes and finishes are confirmed on enquiry.",
-    kaws.url,
+    kaws,
     "diy",
   ),
   p(
@@ -226,7 +226,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculpted face figurines with gold detail.",
     "Sculpted face figurines finished with gold detailing, designed as a paired feature on a console or shelf.",
-    figurines2.url,
+    figurines,
     "diy",
   ),
   p(
@@ -235,7 +235,7 @@ export const PRODUCTS: Product[] = [
     "Vases",
     "Vase arrangements with lasting faux florals.",
     "Vase arrangements with long-lasting faux florals in a range of colours. A low-maintenance way to add softness and colour to a room.",
-    plasticVase.url,
+    plasticVase,
     "diy",
   ),
 ];
@@ -335,7 +335,7 @@ export const SERVICES: Service[] = [
     detail:
       "The finishing layer of a room. Browse the catalogue or tell us the look you want and we will suggest pieces that fit the space.",
     points: ["Mirrors & wall décor", "Figurines & sculptures", "Vases & florals", "Lamps & accent furniture"],
-    image: figurines.url,
+    image: figurines,
   },
   {
     slug: "3d-interior-visualization",
@@ -455,8 +455,8 @@ export const PORTFOLIO: PortfolioItem[] = [
       "Keep the palette quiet, let texture carry the interest, and use one strong sculptural piece as the anchor of the seating arrangement.",
     services: ["Interior Design & Styling", "Premium Furniture & Décor", "Space Planning & Layout"],
     pieces: ["Center Tables", "Plastic Vase Flowers", "Frames"],
-    cover: heroCover.url,
-    gallery: [heroCover.url, brandPoster.url],
+    cover: heroCover,
+    gallery: [heroCover, brandPoster],
     concept: false,
   },
   {
@@ -470,8 +470,8 @@ export const PORTFOLIO: PortfolioItem[] = [
       "Mirrors are placed to bounce light deeper into the space, with framed pieces keeping the eye moving along the wall.",
     services: ["Interior Design & Styling", "Home Décor Accessories"],
     pieces: ["Mirrors", "Frames", "Standing Lamps"],
-    cover: portfolioStrip.url,
-    gallery: [portfolioStrip.url, mirror.url, frames.url],
+    cover: portfolioStrip,
+    gallery: [portfolioStrip, mirror, frames],
     concept: false,
   },
   {
