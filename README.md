@@ -57,8 +57,7 @@ IMPORTANT:
 - Preserve the uploaded assets professionally.
 - The previously supplied interior/product/service images should also be incorporated appropriately where relevant.
 
-==================================================
-2. CONTACT INFORMATION
+================================================== 2. CONTACT INFORMATION
 
 Email:
 renoluxeandinterior.info@gmail.com
@@ -88,8 +87,7 @@ Worldwide product delivery
 Interior installation:
 Available within Nigeria.
 
-==================================================
-3. OVERALL WEBSITE STRUCTURE
+================================================== 3. OVERALL WEBSITE STRUCTURE
 
 Create a true multi-page website/web application.
 
@@ -122,8 +120,7 @@ Do not make fake buttons that lead nowhere.
 
 Every CTA must have a meaningful action.
 
-==================================================
-4. MOBILE BOTTOM NAVIGATION
+================================================== 4. MOBILE BOTTOM NAVIGATION
 
 This is an important requirement.
 
@@ -162,8 +159,7 @@ The desktop header should include:
 
 Use a responsive navigation menu on smaller tablet sizes.
 
-==================================================
-5. HOME PAGE
+================================================== 5. HOME PAGE
 
 Create a visually impressive luxury hero section.
 
@@ -196,8 +192,7 @@ Immediately below the hero, create a strong visual introduction containing:
 - Worldwide product delivery
 - Nigeria installation availability
 
-==================================================
-6. ABOUT US
+================================================== 6. ABOUT US
 
 Create a professional About page.
 
@@ -250,8 +245,7 @@ Mention sustainable design principles where appropriate, such as:
 
 Do not make exaggerated environmental claims.
 
-==================================================
-7. SERVICES
+================================================== 7. SERVICES
 
 Create a dedicated Services page with beautiful visual service cards.
 
@@ -302,8 +296,7 @@ Discuss This Service
 
 The WhatsApp button should automatically identify the selected service in the generated message.
 
-==================================================
-8. INTERIOR DECOR PACKAGES / PLANS
+================================================== 8. INTERIOR DECOR PACKAGES / PLANS
 
 Create a premium Plans page.
 
@@ -371,8 +364,7 @@ Request This Package
 
 Clicking it should open the enquiry/WhatsApp workflow with the package automatically identified.
 
-==================================================
-9. PRODUCTS / CATALOGUE
+================================================== 9. PRODUCTS / CATALOGUE
 
 Create a full product catalogue.
 
@@ -439,8 +431,7 @@ Create search and filtering functionality:
 - Filter by category
 - Sort where appropriate
 
-==================================================
-10. PRODUCT DETAILS PAGE
+================================================== 10. PRODUCT DETAILS PAGE
 
 When a customer clicks a product, open a dedicated product details page.
 
@@ -466,8 +457,7 @@ Do NOT create an online payment checkout.
 The main action is:
 Contact Reno Luxe on WhatsApp
 
-==================================================
-11. SMART WHATSAPP ORDERING
+================================================== 11. SMART WHATSAPP ORDERING
 
 This is a critical requirement.
 
@@ -497,8 +487,7 @@ Do not expose a hard-coded example instead of implementing the dynamic functiona
 
 The actual supplied WhatsApp link must be used.
 
-==================================================
-12. LOCATION REQUIREMENT
+================================================== 12. LOCATION REQUIREMENT
 
 Customers must provide their location when placing/enquiring about a product.
 
@@ -516,8 +505,7 @@ This is important because Reno Luxe provides worldwide delivery.
 
 Do not require the customer to provide a Reno Luxe physical address because there is none to display.
 
-==================================================
-13. DELIVERY
+================================================== 13. DELIVERY
 
 Create a Delivery Information section/page.
 
@@ -546,8 +534,7 @@ State that:
 
 are confirmed during the enquiry process based on destination and product.
 
-==================================================
-14. CONSULTATION
+================================================== 14. CONSULTATION
 
 Create a dedicated Consultation page.
 
@@ -585,8 +572,7 @@ After submission:
 
 Do not create a fake internal email system unless required.
 
-==================================================
-15. PROJECT REQUEST FORM
+================================================== 15. PROJECT REQUEST FORM
 
 Create a professional project enquiry workflow.
 
@@ -621,8 +607,7 @@ Submit via WhatsApp
 and
 Submit via Email
 
-==================================================
-16. CUSTOMER ACCOUNTS
+================================================== 16. CUSTOMER ACCOUNTS
 
 Create real customer account functionality.
 
@@ -649,8 +634,7 @@ Use clear empty states such as:
 
 Do not create fake order data.
 
-==================================================
-17. FAVOURITES
+================================================== 17. FAVOURITES
 
 Allow customers to save:
 
@@ -660,8 +644,7 @@ Allow customers to save:
 
 The Saved/Favourites area should be accessible from the mobile bottom navigation.
 
-==================================================
-18. ENQUIRY / PROJECT STATUS
+================================================== 18. ENQUIRY / PROJECT STATUS
 
 Create an architecture for enquiry/project status.
 
@@ -679,8 +662,7 @@ Do not pretend the website is automatically updating these statuses unless an ac
 
 Build the structure so it can be connected to a proper backend/admin workflow.
 
-==================================================
-19. PORTFOLIO
+================================================== 19. PORTFOLIO
 
 Create a premium Portfolio page separate from Products.
 
@@ -713,8 +695,7 @@ Do not invent completed projects.
 
 If there are not enough real projects yet, build the structure using the supplied images and clearly avoid falsely claiming they are completed client projects.
 
-==================================================
-20. AI "VISUALIZE YOUR SPACE"
+================================================== 20. AI "VISUALIZE YOUR SPACE"
 
 Create a major feature called:
 
@@ -751,8 +732,7 @@ Lovable should build the proper UI and architecture for the feature. If actual A
 
 The website should be prepared so an appropriate AI image-generation service/API can be connected.
 
-==================================================
-21. INSPIRATION IMAGE UPLOAD
+================================================== 21. INSPIRATION IMAGE UPLOAD
 
 Allow customers to upload inspiration/reference images.
 
@@ -768,8 +748,7 @@ Use these to inform the visualization/project enquiry where technically possible
 
 Allow multiple uploads.
 
-==================================================
-22. CUSTOM DESIGN
+================================================== 22. CUSTOM DESIGN
 
 Create a prominent:
 Request a Custom Design
@@ -788,8 +767,7 @@ Include:
 
 Provide WhatsApp and Email submission options.
 
-==================================================
-23. VIJU WHOLESALE SECTION
+================================================== 23. VIJU WHOLESALE SECTION
 
 Create a separate, clearly identified section/page for the additional wholesale offering.
 
@@ -828,8 +806,7 @@ Use the exact supplied WhatsApp connection.
 
 Do not claim to be an official Viju distributor/partner unless the client later provides evidence or explicitly asks for that claim.
 
-==================================================
-24. AI-GENERATED INTERIOR CONTENT
+================================================== 24. AI-GENERATED INTERIOR CONTENT
 
 Where AI-generated interior images are used, make them visually premium and consistent with Reno Luxe branding.
 

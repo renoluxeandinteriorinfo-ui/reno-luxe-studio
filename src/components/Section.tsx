@@ -32,7 +32,9 @@ export function SectionHeading({
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
       {overline ? <p className="overline text-primary">{overline}</p> : null}
       <h2 className="mt-3 text-3xl font-light tracking-tight sm:text-4xl md:text-5xl">{title}</h2>
-      {lead ? <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">{lead}</p> : null}
+      {lead ? (
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">{lead}</p>
+      ) : null}
     </div>
   );
 }

@@ -34,7 +34,11 @@ export function BottomNav() {
       to: user ? "/account" : "/login",
       label: "Account",
       icon: UserRound,
-      match: (p: string) => p.startsWith("/account") || p.startsWith("/login") || p.startsWith("/signup") || p.startsWith("/enquiries"),
+      match: (p: string) =>
+        p.startsWith("/account") ||
+        p.startsWith("/login") ||
+        p.startsWith("/signup") ||
+        p.startsWith("/enquiries"),
     },
   ] as const;
 

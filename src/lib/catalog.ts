@@ -297,7 +297,12 @@ export const SERVICES: Service[] = [
       "Transform existing residential spaces through thoughtful renovation, layout improvements, finishes, décor and styling.",
     detail:
       "We assess the existing space, agree a design direction with you, and work through finishes, joinery, lighting and styling so the finished home feels considered from every angle.",
-    points: ["Space assessment", "Layout improvements", "Finishes & materials", "Décor and final styling"],
+    points: [
+      "Space assessment",
+      "Layout improvements",
+      "Finishes & materials",
+      "Décor and final styling",
+    ],
     image: sceneLiving,
   },
   {
@@ -307,7 +312,12 @@ export const SERVICES: Service[] = [
       "Create cohesive, elegant interiors based on your taste, lifestyle, functionality and space.",
     detail:
       "A complete design direction: palette, materials, furniture, lighting and accessories brought together into one coherent scheme that suits how you actually live or work.",
-    points: ["Design direction", "Colour & material palette", "Furniture selection", "Accessory styling"],
+    points: [
+      "Design direction",
+      "Colour & material palette",
+      "Furniture selection",
+      "Accessory styling",
+    ],
     image: sceneBedroom,
   },
   {
@@ -317,7 +327,12 @@ export const SERVICES: Service[] = [
       "Selected furniture, décor pieces and accessories that complement sophisticated interiors.",
     detail:
       "We source and supply furniture and décor that fits the scheme — from anchor pieces such as couches and centre tables to the finishing accessories.",
-    points: ["Sourcing & supply", "Worldwide delivery", "Quality-led selection", "Scheme-matched pieces"],
+    points: [
+      "Sourcing & supply",
+      "Worldwide delivery",
+      "Quality-led selection",
+      "Scheme-matched pieces",
+    ],
     image: sceneOffice,
   },
   {
@@ -326,7 +341,12 @@ export const SERVICES: Service[] = [
     summary: "Optimise the arrangement and functionality of your spaces.",
     detail:
       "Planning circulation, zoning and furniture placement so a space works properly before anything is bought or installed.",
-    points: ["Zoning & circulation", "Furniture placement", "Functional review", "Scale & proportion"],
+    points: [
+      "Zoning & circulation",
+      "Furniture placement",
+      "Functional review",
+      "Scale & proportion",
+    ],
     image: sceneRetail,
   },
   {
@@ -336,7 +356,12 @@ export const SERVICES: Service[] = [
       "Mirrors, figurines, ornaments, vases, sculptures, lamps, tables, chairs and other décor accessories.",
     detail:
       "The finishing layer of a room. Browse the catalogue or tell us the look you want and we will suggest pieces that fit the space.",
-    points: ["Mirrors & wall décor", "Figurines & sculptures", "Vases & florals", "Lamps & accent furniture"],
+    points: [
+      "Mirrors & wall décor",
+      "Figurines & sculptures",
+      "Vases & florals",
+      "Lamps & accent furniture",
+    ],
     image: figurines.url,
   },
   {
@@ -346,7 +371,12 @@ export const SERVICES: Service[] = [
       "Conceptual visualizations that help you understand how a space could look before implementation.",
     detail:
       "Visual concepts make decisions easier. Try the on-site Visualize Your Space tool for an instant conceptual direction, or request a bespoke visualization from our team.",
-    points: ["Concept imagery", "Style exploration", "Direction before spend", "Bespoke visualizations on request"],
+    points: [
+      "Concept imagery",
+      "Style exploration",
+      "Direction before spend",
+      "Bespoke visualizations on request",
+    ],
     image: sceneLiving,
   },
   {
@@ -356,7 +386,12 @@ export const SERVICES: Service[] = [
       "Request a completely custom project that does not fit an existing service or package.",
     detail:
       "If your requirement sits outside our standard services, describe it and we will scope it with you from first idea to installation.",
-    points: ["Bespoke scope", "Tailored quotation", "Design + sourcing + execution", "Any space type"],
+    points: [
+      "Bespoke scope",
+      "Tailored quotation",
+      "Design + sourcing + execution",
+      "Any space type",
+    ],
     image: sceneOffice,
   },
 ];
@@ -407,7 +442,13 @@ export const PACKAGES: Package[] = [
     slug: "shop-commercial-space",
     title: "Shop / Commercial Space",
     intro: "Interiors for business environments where the space has to work as hard as it looks.",
-    bestFor: ["Retail shops", "Offices", "Showrooms", "Small commercial spaces", "Other business environments"],
+    bestFor: [
+      "Retail shops",
+      "Offices",
+      "Showrooms",
+      "Small commercial spaces",
+      "Other business environments",
+    ],
     scope: [
       "Brand-aware design direction",
       "Customer flow and layout planning",
@@ -498,7 +539,8 @@ export const PORTFOLIO: PortfolioItem[] = [
     short: "Concept direction for a dark timber and gold executive office.",
     overview:
       "A conceptual commercial direction showing how a workspace can feel executive without losing warmth.",
-    approach: "Dark timber joinery, integrated lighting, restrained gold trims and a clear meeting zone.",
+    approach:
+      "Dark timber joinery, integrated lighting, restrained gold trims and a clear meeting zone.",
     services: ["Space Planning & Layout", "Interior Design & Styling"],
     pieces: ["Fancy Chairs", "Frames"],
     cover: sceneOffice,
@@ -512,7 +554,8 @@ export const PORTFOLIO: PortfolioItem[] = [
     short: "Concept direction for a small luxury retail space.",
     overview:
       "A conceptual retail direction focused on display lighting, circulation and a strong central counter.",
-    approach: "Dark display joinery, focused lighting on merchandise, and a clear path through the space.",
+    approach:
+      "Dark display joinery, focused lighting on merchandise, and a clear path through the space.",
     services: ["Space Planning & Layout", "Premium Furniture & Décor"],
     pieces: ["Standing Lamps", "Goldcurl Ornaments"],
     cover: sceneRetail,
@@ -526,7 +569,8 @@ export const PORTFOLIO: PortfolioItem[] = [
     short: "Concept direction for a panelled bedroom refresh.",
     overview:
       "A conceptual renovation direction for a main bedroom, showing panelling, lighting and soft layered bedding.",
-    approach: "A dark panelled headboard wall, warm cream textiles and pendant lighting either side of the bed.",
+    approach:
+      "A dark panelled headboard wall, warm cream textiles and pendant lighting either side of the bed.",
     services: ["Luxury Home Renovation", "Interior Design & Styling"],
     pieces: ["Side Stool", "Visualization Lamp"],
     cover: sceneBedroom,

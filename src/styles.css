@@ -166,12 +166,7 @@
 }
 
 @utility hairline {
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    var(--gold-deep),
-    transparent
-  );
+  background-image: linear-gradient(to right, transparent, var(--gold-deep), transparent);
   height: 1px;
 }
 
