@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ConsultationRouteImport } from './routes/consultation'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -24,6 +25,9 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VijuRouteImport } from './routes/viju'
+import { Route as VisualizeRouteImport } from './routes/visualize'
+import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
+import { Route as ApiGenerateImageRouteImport } from './routes/api/generate-image'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
@@ -31,6 +35,10 @@ import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -103,6 +111,21 @@ const VijuRoute = VijuRouteImport.update({
   path: '/viju',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VisualizeRoute = VisualizeRouteImport.update({
+  id: '/visualize',
+  path: '/visualize',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const ApiGenerateImageRoute = ApiGenerateImageRouteImport.update({
+  id: '/api/generate-image',
+  path: '/api/generate-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioSlugRoute = PortfolioSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -135,6 +158,9 @@ export interface FileRoutesByFullPath {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/account': typeof AuthenticatedAccountRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -155,6 +181,9 @@ export interface FileRoutesByTo {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/account': typeof AuthenticatedAccountRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -162,6 +191,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/consultation': typeof ConsultationRoute
   '/contact': typeof ContactRoute
@@ -176,6 +206,9 @@ export interface FileRoutesById {
   '/signup': typeof SignupRoute
   '/terms': typeof TermsRoute
   '/viju': typeof VijuRoute
+  '/visualize': typeof VisualizeRoute
+  '/_authenticated/account': typeof AuthenticatedAccountRoute
+  '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -198,6 +231,9 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/account'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
@@ -218,12 +254,16 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/account'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/about'
     | '/consultation'
     | '/contact'
@@ -238,6 +278,9 @@ export interface FileRouteTypes {
     | '/signup'
     | '/terms'
     | '/viju'
+    | '/visualize'
+    | '/_authenticated/account'
+    | '/api/generate-image'
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
@@ -245,6 +288,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   ConsultationRoute: typeof ConsultationRoute
   ContactRoute: typeof ContactRoute
@@ -259,6 +303,8 @@ export interface RootRouteChildren {
   SignupRoute: typeof SignupRoute
   TermsRoute: typeof TermsRoute
   VijuRoute: typeof VijuRoute
+  VisualizeRoute: typeof VisualizeRoute
+  ApiGenerateImageRoute: typeof ApiGenerateImageRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -268,6 +314,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -368,6 +421,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VijuRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/visualize': {
+      id: '/visualize'
+      path: '/visualize'
+      fullPath: '/visualize'
+      preLoaderRoute: typeof VisualizeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/account': {
+      id: '/_authenticated/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AuthenticatedAccountRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/api/generate-image': {
+      id: '/api/generate-image'
+      path: '/api/generate-image'
+      fullPath: '/api/generate-image'
+      preLoaderRoute: typeof ApiGenerateImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/portfolio/$slug': {
       id: '/portfolio/$slug'
       path: '/$slug'
@@ -391,6 +465,17 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAccountRoute: AuthenticatedAccountRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
 interface PortfolioRouteChildren {
   PortfolioSlugRoute: typeof PortfolioSlugRoute
@@ -430,6 +515,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   ConsultationRoute: ConsultationRoute,
   ContactRoute: ContactRoute,
@@ -444,6 +530,8 @@ const rootRouteChildren: RootRouteChildren = {
   SignupRoute: SignupRoute,
   TermsRoute: TermsRoute,
   VijuRoute: VijuRoute,
+  VisualizeRoute: VisualizeRoute,
+  ApiGenerateImageRoute: ApiGenerateImageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
