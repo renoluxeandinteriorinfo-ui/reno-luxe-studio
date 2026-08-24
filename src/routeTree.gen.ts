@@ -27,6 +27,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as VijuRouteImport } from './routes/viju'
 import { Route as VisualizeRouteImport } from './routes/visualize'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
+import { Route as AuthenticatedEnquiriesRouteImport } from './routes/_authenticated/enquiries'
 import { Route as AuthenticatedFavouritesRouteImport } from './routes/_authenticated/favourites'
 import { Route as ApiGenerateImageRouteImport } from './routes/api/generate-image'
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
@@ -122,6 +123,11 @@ const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
   path: '/account',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedEnquiriesRoute = AuthenticatedEnquiriesRouteImport.update({
+  id: '/enquiries',
+  path: '/enquiries',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedFavouritesRoute = AuthenticatedFavouritesRouteImport.update({
   id: '/favourites',
   path: '/favourites',
@@ -166,6 +172,7 @@ export interface FileRoutesByFullPath {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/enquiries': typeof AuthenticatedEnquiriesRoute
   '/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -190,6 +197,7 @@ export interface FileRoutesByTo {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/enquiries': typeof AuthenticatedEnquiriesRoute
   '/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -216,6 +224,7 @@ export interface FileRoutesById {
   '/viju': typeof VijuRoute
   '/visualize': typeof VisualizeRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
+  '/_authenticated/enquiries': typeof AuthenticatedEnquiriesRoute
   '/_authenticated/favourites': typeof AuthenticatedFavouritesRoute
   '/api/generate-image': typeof ApiGenerateImageRoute
   '/portfolio/$slug': typeof PortfolioSlugRoute
@@ -242,6 +251,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/account'
+    | '/enquiries'
     | '/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
@@ -266,6 +276,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/account'
+    | '/enquiries'
     | '/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
@@ -291,6 +302,7 @@ export interface FileRouteTypes {
     | '/viju'
     | '/visualize'
     | '/_authenticated/account'
+    | '/_authenticated/enquiries'
     | '/_authenticated/favourites'
     | '/api/generate-image'
     | '/portfolio/$slug'
@@ -447,6 +459,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAccountRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/enquiries': {
+      id: '/_authenticated/enquiries'
+      path: '/enquiries'
+      fullPath: '/enquiries'
+      preLoaderRoute: typeof AuthenticatedEnquiriesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/favourites': {
       id: '/_authenticated/favourites'
       path: '/favourites'
@@ -487,11 +506,13 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
+  AuthenticatedEnquiriesRoute: typeof AuthenticatedEnquiriesRoute
   AuthenticatedFavouritesRoute: typeof AuthenticatedFavouritesRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAccountRoute: AuthenticatedAccountRoute,
+  AuthenticatedEnquiriesRoute: AuthenticatedEnquiriesRoute,
   AuthenticatedFavouritesRoute: AuthenticatedFavouritesRoute,
 }
 
