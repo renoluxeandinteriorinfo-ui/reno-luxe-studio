@@ -6,16 +6,24 @@ import sideStool from "@/assets/side-stool.jpg.asset.json";
 import tripod from "@/assets/tripod-flame-aroma.jpg.asset.json";
 import figurines2 from "@/assets/figurines-2.jpg.asset.json";
 import foreignCouch from "@/assets/foreign-couch.jpg.asset.json";
-const backMan = "/images/products/back-man-figurines.jpeg";
-const fancyChairs = "/images/products/fancy-chairs.jpeg";
-const kaws = "/images/products/kaws.jpeg";
-const visualizationLamp = "/images/products/visualization-lamp.jpeg";
-const swingChairs = "/images/products/swing-chairs.jpeg";
-const frames = "/images/products/frames.jpeg";
-const centerTables = "/images/products/center-tables.jpeg";
-const figurines = "/images/products/figurines.jpeg";
-const plasticVase = "/images/products/plastic-vase-flowers.jpeg";
-const mirror = "/images/products/mirror.jpeg";
+const backMan = "/images/generated-products/back-man-figurines.png";
+const fancyChairs = "/images/generated-products/fancy-chairs.png";
+const kaws = "/images/generated-products/kaws.png";
+const visualizationLamp = "/images/generated-products/visualization-lamp.png";
+const swingChairs = "/images/generated-products/swing-chairs.png";
+const frames = "/images/generated-products/frames.png";
+const centerTables = "/images/generated-products/center-tables.png";
+const figurines = "/images/generated-products/figurines.png";
+const plasticVase = "/images/generated-products/plastic-vase-flowers.png";
+const mirror = "/images/generated-products/mirror.png";
+const foreignCouchImage = "/images/generated-products/foreign-couch.png";
+const sideStoolImage = "/images/generated-products/side-stool.png";
+const standingLampsImage = "/images/generated-products/standing-lamps.png";
+const tripodFlameAromaImage = "/images/generated-products/tripod-flame-aroma.png";
+const acrylicWallSculptureImage = "/images/generated-products/acrylic-wall-sculpture.png";
+const goldcurlOrnamentsImage = "/images/generated-products/goldcurl-ornaments.png";
+const figurineGoldFaceImage = "/images/generated-products/figurine-gold-face.png";
+const darkCenterTableImage = "/images/generated-products/center-table-dark.png";
 
 const vijuRange = "/images/viju/viju-range.jpeg";
 const vijuFamily = "/images/viju/viju-family.jpeg";
@@ -90,7 +98,7 @@ export const PRODUCTS: Product[] = [
     "Furniture",
     "Curved contemporary couch for modern living rooms.",
     "A soft, curved couch designed for contemporary living spaces. Ideal as the anchor piece of a living room scheme. Fabric, size and configuration options are confirmed during enquiry.",
-    sceneLiving,
+    foreignCouchImage,
     "professional",
   ),
   p(
@@ -117,7 +125,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Low-profile dark timber centre table.",
     "A low, rectangular centre table in a dark timber finish. Pairs well with neutral upholstery and warm lighting.",
-    centerTables,
+    darkCenterTableImage,
     "diy",
   ),
   p(
@@ -126,7 +134,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Two-tier round side stool.",
     "A compact two-tier side stool for beside a sofa or bed. Useful as an extra surface with additional display space below.",
-    centerTables,
+    sideStoolImage,
     "diy",
   ),
   p(
@@ -135,7 +143,7 @@ export const PRODUCTS: Product[] = [
     "Lighting",
     "Arched floor lamp for ambient lighting.",
     "An arched standing lamp that delivers soft ambient light over a seating area. A simple way to add layered lighting to a room.",
-    visualizationLamp,
+    standingLampsImage,
     "diy",
   ),
   p(
@@ -153,7 +161,7 @@ export const PRODUCTS: Product[] = [
     "Accessories",
     "Aroma diffuser with dynamic light effects.",
     "An aroma diffuser with adjustable light effects and remote control. Adds scent and soft colour to bedrooms, lounges and studios.",
-    visualizationLamp,
+    tripodFlameAromaImage,
     "diy",
   ),
   p(
@@ -171,7 +179,7 @@ export const PRODUCTS: Product[] = [
     "Wall Décor",
     "Layered acrylic scenic wall piece.",
     "A layered acrylic wall sculpture with a scenic composition. Designed as a focal wall piece for a living room, hallway or reception.",
-    frames,
+    acrylicWallSculptureImage,
     "professional",
   ),
   p(
@@ -189,7 +197,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculptural gold curl ornaments on a base.",
     "A pair of sculptural gold-toned curl ornaments mounted on display bases. Ideal for console tables, shelving and centre tables.",
-    figurines,
+    goldcurlOrnamentsImage,
     "diy",
   ),
   p(
@@ -226,7 +234,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculpted face figurines with gold detail.",
     "Sculpted face figurines finished with gold detailing, designed as a paired feature on a console or shelf.",
-    figurines,
+    figurineGoldFaceImage,
     "diy",
   ),
   p(
