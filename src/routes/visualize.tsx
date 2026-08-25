@@ -63,18 +63,37 @@ function Visualize() {
     }
   }
 
+  async function toJpegBlob(dataUrl: string): Promise<Blob> {
+    const img = new Image();
+    img.src = dataUrl;
+    await img.decode();
+    const canvas = document.createElement("canvas");
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Could not process the image");
+    ctx.drawImage(img, 0, 0);
+    return await new Promise<Blob>((resolve, reject) =>
+      canvas.toBlob(
+        (blob) => (blob ? resolve(blob) : reject(new Error("Could not process the image"))),
+        "image/jpeg",
+        0.92,
+      ),
+    );
+  }
+
   async function save() {
     if (!user || !image) return;
     try {
-      const blob = await (await fetch(image)).blob();
-      const path = `${user.id}/${crypto.randomUUID()}.png`;
+      const blob = await toJpegBlob(image);
+      const path = `${user.id}/${crypto.randomUUID()}.jpg`;
       const { error: uploadError } = await supabase.storage
         .from("visualizations")
-        .upload(path, blob, { contentType: "image/png" });
+        .upload(path, blob, { contentType: "image/jpeg" });
       if (uploadError) throw uploadError;
       const { error } = await supabase.from("visualizations").insert({
         user_id: user.id,
-        image_url: path,
+        image_url: `/api/public/visualizations/${path}`,
         space_type: space,
         style,
         notes: notes || null,
@@ -85,6 +104,7 @@ function Visualize() {
       toast.error(error instanceof Error ? error.message : "Could not save the visualization");
     }
   }
+
 
   return (
     <>

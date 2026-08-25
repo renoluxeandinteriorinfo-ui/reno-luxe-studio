@@ -33,6 +33,7 @@ import { Route as ApiGenerateImageRouteImport } from './routes/api/generate-imag
 import { Route as PortfolioSlugRouteImport } from './routes/portfolio.$slug'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
+import { Route as ApiPublicVisualizationsSplatRouteImport } from './routes/api/public/visualizations/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -153,6 +154,12 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ApiPublicVisualizationsSplatRoute =
+  ApiPublicVisualizationsSplatRouteImport.update({
+    id: '/api/public/visualizations/$',
+    path: '/api/public/visualizations/$',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -178,6 +185,7 @@ export interface FileRoutesByFullPath {
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/api/public/visualizations/$': typeof ApiPublicVisualizationsSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -203,6 +211,7 @@ export interface FileRoutesByTo {
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/api/public/visualizations/$': typeof ApiPublicVisualizationsSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -230,6 +239,7 @@ export interface FileRoutesById {
   '/portfolio/$slug': typeof PortfolioSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/api/public/visualizations/$': typeof ApiPublicVisualizationsSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -257,6 +267,7 @@ export interface FileRouteTypes {
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
+    | '/api/public/visualizations/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -282,6 +293,7 @@ export interface FileRouteTypes {
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
+    | '/api/public/visualizations/$'
   id:
     | '__root__'
     | '/'
@@ -308,6 +320,7 @@ export interface FileRouteTypes {
     | '/portfolio/$slug'
     | '/products/$slug'
     | '/services/$slug'
+    | '/api/public/visualizations/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -329,6 +342,7 @@ export interface RootRouteChildren {
   VijuRoute: typeof VijuRoute
   VisualizeRoute: typeof VisualizeRoute
   ApiGenerateImageRoute: typeof ApiGenerateImageRoute
+  ApiPublicVisualizationsSplatRoute: typeof ApiPublicVisualizationsSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -501,6 +515,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSlugRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/api/public/visualizations/$': {
+      id: '/api/public/visualizations/$'
+      path: '/api/public/visualizations/$'
+      fullPath: '/api/public/visualizations/$'
+      preLoaderRoute: typeof ApiPublicVisualizationsSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -574,6 +595,7 @@ const rootRouteChildren: RootRouteChildren = {
   VijuRoute: VijuRoute,
   VisualizeRoute: VisualizeRoute,
   ApiGenerateImageRoute: ApiGenerateImageRoute,
+  ApiPublicVisualizationsSplatRoute: ApiPublicVisualizationsSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
