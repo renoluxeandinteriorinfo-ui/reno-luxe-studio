@@ -39,8 +39,8 @@ export const BRAND_IMAGES = {
   scenes: {
     living: "/sceneLiving.jpg",
     bedroom: "/sceneBedroom.jpg",
-    office: "/sceneOffice.jpg,
-    retail: "/sceneRetail.jpg,
+    office: "/sceneOffice.jpg",
+    retail: "/sceneRetail.jpg",
   },
 };
 
