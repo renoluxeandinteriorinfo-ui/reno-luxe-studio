@@ -25,7 +25,7 @@ import viju4 from "@/assets/scene-bedroom.jpg";
 import heroCover from "@/assets/scene-living.jpg";
 import brandPoster from "@/assets/scene-bedroom.jpg";
 import portfolioStrip from "@/assets/scene-retail.jpg";
-import logo from "@/assets/scene-office.jpg";
+const logo = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-21%20at%207.21.40%20PM-LfqAaPp9rRQSSZasOijFBi5zpWnwDX.jpeg";
 
 import sceneLiving from "@/assets/scene-living.jpg";
 import sceneBedroom from "@/assets/scene-bedroom.jpg";
