@@ -11,7 +11,7 @@
 "/kaws.jpg";
 "/visualization-lamp.jpg";
 "/back-man-figurines.jpg";
-export const swingChairs = [{ id: 1, name: "Swing Chair", image: "/swing-chair.jpg" }];   
+"/swing-chairs.jpg";  
 "/frames.jpg";
 "/plastic-vase-flowers.jpg";
 "/mirror.jpg";
