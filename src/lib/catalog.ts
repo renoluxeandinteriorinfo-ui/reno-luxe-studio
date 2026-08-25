@@ -1,47 +1,46 @@
-import goldcurl from "@/assets/goldcurl-ornaments.jpg.asset.json";
-import acrylic from "@/assets/acrylic-wall-sculpture.jpg.asset.json";
-import standingLamps from "@/assets/standing-lamps.jpg.asset.json";
-import centerTables from "@/assets/center-tables.jpg.asset.json";
-import centerTables2 from "@/assets/center-tables-2.jpg.asset.json";
-import sideStool from "@/assets/side-stool.jpg.asset.json";
-import tripod from "@/assets/tripod-flame-aroma.jpg.asset.json";
-import figurines from "@/assets/figurines.jpg.asset.json";
-import figurines2 from "@/assets/figurines-2.jpg.asset.json";
-import foreignCouch from "@/assets/foreign-couch.jpg.asset.json";
-import fancyChairs from "@/assets/fancy-chairs.jpg.asset.json";
-import kaws from "@/assets/kaws.jpg.asset.json";
-import visualizationLamp from "@/assets/visualization-lamp.jpg.asset.json";
-import backMan from "@/assets/back-man-figurines.jpg.asset.json";
-import swingChairs from "@/assets/swing-chairs.jpg.asset.json";
-import frames from "@/assets/frames.jpg.asset.json";
-import plasticVase from "@/assets/plastic-vase-flowers.jpg.asset.json";
-import mirror from "@/assets/mirror.jpg.asset.json";
+"/goldcurl-ornaments.jpg";
+"/acrylic-wall-sculpture.jpg";
+"/standing-lamps.jpg";
+"/center-tables-2.jpg";
+"/side-stool.jpg";
+"/tripod-flame-aroma.jpg";
+"/figurines.jpg";
+"/figurines-2.jpg";
+"/foreign-couch.jpg";
+"/fancy-chairs.jpg";
+"/kaws.jpg";
+"/visualization-lamp.jpg";
+"/back-man-figurines.jpg";
+"/swing-chairs.jpg";
+"/frames.jpg";
+"/plastic-vase-flowers.jpg";
+"/mirror.jpg";
 
-import viju1 from "@/assets/viju-1.jpg.asset.json";
-import viju2 from "@/assets/viju-2.jpg.asset.json";
-import viju3 from "@/assets/viju-3.jpg.asset.json";
-import viju4 from "@/assets/viju-4.jpg.asset.json";
+"/viju-1.jpg";
+"/viju-2.jpg";
+"/viju-3.jpg";
+"/viju-4.jpg";
 
-import heroCover from "@/assets/hero-cover.jpg.asset.json";
-import brandPoster from "@/assets/brand-poster.jpg.asset.json";
-import portfolioStrip from "@/assets/portfolio-strip.jpg.asset.json";
-import logo from "@/assets/reno-luxe-logo.jpg.asset.json";
+"/hero-cover.jpg";
+"/brand-poster.jpg";
+"/portfolio-strip.jpg";
+"/reno-luxe-logo.jpg";
 
-import sceneLiving from "@/assets/scene-living.jpg";
-import sceneBedroom from "@/assets/scene-bedroom.jpg";
-import sceneOffice from "@/assets/scene-office.jpg";
-import sceneRetail from "@/assets/scene-retail.jpg";
+"/scene-living.jpg";
+"/scene-bedroom.jpg";
+"/scene-office.jpg";
+"/scene-retail.jpg";
 
 export const BRAND_IMAGES = {
-  logo: logo.url,
-  hero: heroCover.url,
-  poster: brandPoster.url,
-  strip: portfolioStrip.url,
+  logo: "/reno-luxe-logo.jpg",
+  hero: "/hero-cover.jpg",
+  poster: "/brandPoster.jpg",
+  strip: "/portfolioStrip.jpg",
   scenes: {
-    living: sceneLiving,
-    bedroom: sceneBedroom,
-    office: sceneOffice,
-    retail: sceneRetail,
+    living: "/sceneLiving.jpg",
+    bedroom: "/sceneBedroom.jpg",
+    office: "/sceneOffice.jpg,
+    retail: "/sceneRetail.jpg,
   },
 };
 
