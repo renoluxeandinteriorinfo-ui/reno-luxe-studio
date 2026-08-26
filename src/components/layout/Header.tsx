@@ -22,24 +22,20 @@ export const NAV_LINKS = [
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
-    <Link to="/" className="flex min-w-0 items-center gap-3">
+    <Link to="/" className="flex min-w-0 items-center">
       <img
         src={BRAND_IMAGES.logo}
         alt="Reno Luxe & Interior logo"
-        width={44}
-        height={44}
+        width={180}
+        height={172}
         loading="eager"
         decoding="async"
-        className="size-10 shrink-0 rounded-sm object-contain"
+        fetchPriority="high"
+        className={cn(
+          "h-12 w-auto shrink-0 object-contain object-center",
+          compact && "h-10",
+        )}
       />
-      {!compact ? (
-        <span className="min-w-0">
-          <span className="block truncate font-display text-base leading-tight tracking-wide text-foreground">
-            RENO LUXE
-          </span>
-          <span className="overline block text-[0.55rem] text-primary">& Interior</span>
-        </span>
-      ) : null}
     </Link>
   );
 }
