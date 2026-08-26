@@ -24,41 +24,37 @@ import heroCoverAsset from "@/assets/hero-cover.jpg.asset.json";
 import brandPosterAsset from "@/assets/brand-poster.jpg.asset.json";
 import portfolioStripAsset from "@/assets/portfolio-strip.jpg.asset.json";
 import logoAsset from "@/assets/reno-luxe-logo.jpg.asset.json";
-import sceneBedroom from "@/assets/scene-bedroom.jpg";
-import sceneLiving from "@/assets/scene-living.jpg";
-import sceneOffice from "@/assets/scene-office.jpg";
-import sceneRetail from "@/assets/scene-retail.jpg";
+import sceneBedroom from "/scene-bedroom.jpg";
+import sceneLiving from "/scene-living.jpg";
+import sceneOffice from "/scene-office.jpg";
+import sceneRetail from "/scene-retail.jpg";
 
-// The uploaded originals live on the asset CDN in production. During local preview,
-// use a bundled scene image so a missing CDN proxy never produces broken image elements.
-const assetUrl = (asset: { url: string }) =>
-  import.meta.env.DEV ? sceneLiving : asset.url;
-const acrylic = assetUrl(acrylicAsset);
-const backMan = assetUrl(backManAsset);
-const brandPoster = assetUrl(brandPosterAsset);
-const centerTables = assetUrl(centerTablesAsset);
-const centerTables2 = assetUrl(centerTables2Asset);
-const fancyChairs = assetUrl(fancyChairsAsset);
-const figurines = assetUrl(figurinesAsset);
-const figurines2 = assetUrl(figurines2Asset);
-const foreignCouch = assetUrl(foreignCouchAsset);
-const frames = assetUrl(framesAsset);
-const goldcurl = assetUrl(goldcurlAsset);
-const heroCover = assetUrl(heroCoverAsset);
-const kaws = assetUrl(kawsAsset);
-const mirror = assetUrl(mirrorAsset);
-const plasticVase = assetUrl(plasticVaseAsset);
-const portfolioStrip = assetUrl(portfolioStripAsset);
-const renoLuxeLogo = assetUrl(logoAsset);
-const sideStool = assetUrl(sideStoolAsset);
-const standingLamps = assetUrl(standingLampsAsset);
-const swingChairs = assetUrl(swingChairsAsset);
-const tripod = assetUrl(tripodAsset);
-const viju1 = assetUrl(viju1Asset);
-const viju2 = assetUrl(viju2Asset);
-const viju3 = assetUrl(viju3Asset);
-const viju4 = assetUrl(viju4Asset);
-const visualizationLamp = assetUrl(visualizationLampAsset);
+const acrylic = acrylicAsset.url;
+const backMan = backManAsset.url;
+const brandPoster = brandPosterAsset.url;
+const centerTables = centerTablesAsset.url;
+const centerTables2 = centerTables2Asset.url;
+const fancyChairs = fancyChairsAsset.url;
+const figurines = figurinesAsset.url;
+const figurines2 = figurines2Asset.url;
+const foreignCouch = foreignCouchAsset.url;
+const frames = framesAsset.url;
+const goldcurl = goldcurlAsset.url;
+const heroCover = heroCoverAsset.url;
+const kaws = kawsAsset.url;
+const mirror = mirrorAsset.url;
+const plasticVase = plasticVaseAsset.url;
+const portfolioStrip = portfolioStripAsset.url;
+const renoLuxeLogo = logoAsset.url;
+const sideStool = sideStoolAsset.url;
+const standingLamps = standingLampsAsset.url;
+const swingChairs = swingChairsAsset.url;
+const tripod = tripodAsset.url;
+const viju1 = viju1Asset.url;
+const viju2 = viju2Asset.url;
+const viju3 = viju3Asset.url;
+const viju4 = viju4Asset.url;
+const visualizationLamp = visualizationLampAsset.url;
 
 export const BRAND_IMAGES = {
   logo: renoLuxeLogo,
