@@ -1,46 +1,44 @@
-"/goldcurl-ornaments.jpg";
-"/acrylic-wall-sculpture.jpg";
-"/standing-lamps.jpg";
-"/center-tables-2.jpg";
-"/side-stool.jpg";
-"/tripod-flame-aroma.jpg";
-"/figurines.jpg";
-"/figurines-2.jpg";
-"/foreign-couch.jpg";
-"/fancy-chairs.jpg";
-"/kaws.jpg";
-"/visualization-lamp.jpg";
-"/back-man-figurines.jpg";
-export const swingChairs = [{ id: 1, name: "Swing Chair", image: "/your-actual-image.jpg" }];     
-"/frames.jpg";
-"/plastic-vase-flowers.jpg";
-"/mirror.jpg";
-
-"/viju-1.jpg";
-"/viju-2.jpg";
-"/viju-3.jpg";
-"/viju-4.jpg";
-
-"/hero-cover.jpg";
-"/brand-poster.jpg";
-"/portfolio-strip.jpg";
-"/reno-luxe-logo.jpg";
-
-"/scene-living.jpg";
-"/scene-bedroom.jpg";
-"/scene-office.jpg";
-"/scene-retail.jpg";
+import acrylic from "@/assets/acrylic-wall-sculpture.jpg";
+import backMan from "@/assets/back-man-figurines.jpg";
+import brandPoster from "@/assets/brand-poster.jpg";
+import centerTables from "@/assets/center-tables.jpg";
+import centerTables2 from "@/assets/center-tables-2.jpg";
+import fancyChairs from "@/assets/fancy-chairs.jpg";
+import figurines from "@/assets/figurines.jpg";
+import figurines2 from "@/assets/figurines-2.jpg";
+import foreignCouch from "@/assets/foreign-couch.jpg";
+import frames from "@/assets/frames.jpg";
+import goldcurl from "@/assets/goldcurl-ornaments.jpg";
+import heroCover from "@/assets/hero-cover.jpg";
+import kaws from "@/assets/kaws.jpg";
+import mirror from "@/assets/mirror.jpg";
+import plasticVase from "@/assets/plastic-vase-flowers.jpg";
+import portfolioStrip from "@/assets/portfolio-strip.jpg";
+import renoLuxeLogo from "@/assets/reno-luxe-logo.jpg";
+import sceneBedroom from "@/assets/scene-bedroom.jpg";
+import sceneLiving from "@/assets/scene-living.jpg";
+import sceneOffice from "@/assets/scene-office.jpg";
+import sceneRetail from "@/assets/scene-retail.jpg";
+import sideStool from "@/assets/side-stool.jpg";
+import standingLamps from "@/assets/standing-lamps.jpg";
+import swingChairs from "@/assets/swing-chairs.jpg";
+import tripod from "@/assets/tripod-flame-aroma.jpg";
+import viju1 from "@/assets/viju-1.jpg";
+import viju2 from "@/assets/viju-2.jpg";
+import viju3 from "@/assets/viju-3.jpg";
+import viju4 from "@/assets/viju-4.jpg";
+import visualizationLamp from "@/assets/visualization-lamp.jpg";
 
 export const BRAND_IMAGES = {
-  logo: "/reno-luxe-logo.jpg",
-  hero: "/hero-cover.jpg",
-  poster: "/brandPoster.jpg",
-  strip: "/portfolioStrip.jpg",
+  logo: renoLuxeLogo,
+  hero: heroCover,
+  poster: brandPoster,
+  strip: portfolioStrip,
   scenes: {
-    living: "/sceneLiving.jpg",
-    bedroom: "/sceneBedroom.jpg",
-    office: "/sceneOffice.jpg",
-    retail: "/sceneRetail.jpg",
+    living: sceneLiving,
+    bedroom: sceneBedroom,
+    office: sceneOffice,
+    retail: sceneRetail,
   },
 };
 
@@ -82,7 +80,7 @@ export const PRODUCTS: Product[] = [
     "Chairs",
     "Suspended egg-style swing seating with cushioning.",
     "Statement swing seating with a supporting frame and padded cushion. A sculptural addition to a lounge, balcony, reading corner or reception area. Colours and cushion options are confirmed on enquiry.",
-    swingChairs.url,
+    swingChairs,
     "professional",
   ),
   p(
@@ -91,7 +89,7 @@ export const PRODUCTS: Product[] = [
     "Furniture",
     "Curved contemporary couch for modern living rooms.",
     "A soft, curved couch designed for contemporary living spaces. Ideal as the anchor piece of a living room scheme. Fabric, size and configuration options are confirmed during enquiry.",
-    foreignCouch.url,
+    foreignCouch,
     "professional",
   ),
   p(
@@ -100,7 +98,7 @@ export const PRODUCTS: Product[] = [
     "Chairs",
     "Upholstered accent and dining chairs.",
     "Upholstered accent chairs suitable for dining rooms, offices and lounges. Available in a selection of finishes — current options are confirmed on enquiry.",
-    fancyChairs.url,
+    fancyChairs,
   ),
   p(
     "center-tables",
@@ -108,9 +106,9 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Round marble-top centre table with gold frame.",
     "A round centre table with a light stone-look top and a metal frame. Designed to sit at the heart of a living room arrangement.",
-    centerTables.url,
+    centerTables,
     "diy",
-    [centerTables2.url],
+    [centerTables2],
   ),
   p(
     "center-table-dark",
@@ -118,7 +116,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Low-profile dark timber centre table.",
     "A low, rectangular centre table in a dark timber finish. Pairs well with neutral upholstery and warm lighting.",
-    centerTables2.url,
+    centerTables2,
     "diy",
   ),
   p(
@@ -127,7 +125,7 @@ export const PRODUCTS: Product[] = [
     "Tables",
     "Two-tier round side stool.",
     "A compact two-tier side stool for beside a sofa or bed. Useful as an extra surface with additional display space below.",
-    sideStool.url,
+    sideStool,
     "diy",
   ),
   p(
@@ -136,7 +134,7 @@ export const PRODUCTS: Product[] = [
     "Lighting",
     "Arched floor lamp for ambient lighting.",
     "An arched standing lamp that delivers soft ambient light over a seating area. A simple way to add layered lighting to a room.",
-    standingLamps.url,
+    standingLamps,
     "diy",
   ),
   p(
@@ -145,7 +143,7 @@ export const PRODUCTS: Product[] = [
     "Lighting",
     "Illuminated acrylic display lamp.",
     "An illuminated display lamp with an engraved acrylic panel. Works as a bedside, desk or shelf accent light.",
-    visualizationLamp.url,
+    visualizationLamp,
     "diy",
   ),
   p(
@@ -154,7 +152,7 @@ export const PRODUCTS: Product[] = [
     "Accessories",
     "Aroma diffuser with dynamic light effects.",
     "An aroma diffuser with adjustable light effects and remote control. Adds scent and soft colour to bedrooms, lounges and studios.",
-    tripod.url,
+    tripod,
     "diy",
   ),
   p(
@@ -163,7 +161,7 @@ export const PRODUCTS: Product[] = [
     "Mirrors",
     "Arched and framed decorative mirrors.",
     "Decorative mirrors in arched and framed profiles. Mirrors open up a space visually and reflect light through a room. Sizes and frame finishes are confirmed on enquiry.",
-    mirror.url,
+    mirror,
     "professional",
   ),
   p(
@@ -172,7 +170,7 @@ export const PRODUCTS: Product[] = [
     "Wall Décor",
     "Layered acrylic scenic wall piece.",
     "A layered acrylic wall sculpture with a scenic composition. Designed as a focal wall piece for a living room, hallway or reception.",
-    acrylic.url,
+    acrylic,
     "professional",
   ),
   p(
@@ -181,7 +179,7 @@ export const PRODUCTS: Product[] = [
     "Wall Décor",
     "Framed wall art and lettering pieces.",
     "Framed art and lettering pieces for gallery walls and feature walls. Custom wording and framing options are discussed on enquiry.",
-    frames.url,
+    frames,
     "diy",
   ),
   p(
@@ -190,7 +188,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculptural gold curl ornaments on a base.",
     "A pair of sculptural gold-toned curl ornaments mounted on display bases. Ideal for console tables, shelving and centre tables.",
-    goldcurl.url,
+    goldcurl,
     "diy",
   ),
   p(
@@ -199,9 +197,9 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Curated decorative figurines collection.",
     "A curated selection of decorative figurines in mixed finishes for shelves, consoles and display units. Available pieces vary — current stock is confirmed on enquiry.",
-    figurines.url,
+    figurines,
     "diy",
-    [figurines2.url],
+    [figurines2],
   ),
   p(
     "back-man-figurines",
@@ -209,7 +207,7 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Musician-style character figurines pair.",
     "A pair of character figurines with a musical theme. A playful, contemporary accent for a shelf or media unit.",
-    backMan.url,
+    backMan,
     "diy",
   ),
   p(
@@ -218,7 +216,7 @@ export const PRODUCTS: Product[] = [
     "Figurines",
     "Contemporary collectible-style figures.",
     "Contemporary collectible-style figures for modern and art-led interiors. Sizes and finishes are confirmed on enquiry.",
-    kaws.url,
+    kaws,
     "diy",
   ),
   p(
@@ -227,7 +225,7 @@ export const PRODUCTS: Product[] = [
     "Sculptures",
     "Sculpted face figurines with gold detail.",
     "Sculpted face figurines finished with gold detailing, designed as a paired feature on a console or shelf.",
-    figurines2.url,
+    figurines2,
     "diy",
   ),
   p(
@@ -236,7 +234,7 @@ export const PRODUCTS: Product[] = [
     "Vases",
     "Vase arrangements with lasting faux florals.",
     "Vase arrangements with long-lasting faux florals in a range of colours. A low-maintenance way to add softness and colour to a room.",
-    plasticVase.url,
+    plasticVase,
     "diy",
   ),
 ];
@@ -257,25 +255,25 @@ export const VIJU_ITEMS: VijuItem[] = [
     slug: "viju-range",
     name: "Viju Full Product Range",
     note: "Assorted drinks, milk, yoghurt and water range as shown.",
-    image: viju2.url,
+    image: viju2,
   },
   {
     slug: "viju-milk-drinks",
     name: "Viju Milk Drinks Selection",
     note: "Chocolate, malt, wheat and baked yoghurt drinks.",
-    image: viju1.url,
+    image: viju1,
   },
   {
     slug: "viju-family-choice",
     name: "Viju Family Selection",
     note: "Mixed flavours including wheat, chocolate, apple and orange.",
-    image: viju4.url,
+    image: viju4,
   },
   {
     slug: "viju-assorted",
     name: "Viju Assorted Cartons & Bottles",
     note: "Bottled and carton formats for bulk purchase.",
-    image: viju3.url,
+    image: viju3,
   },
 ];
 
@@ -336,7 +334,7 @@ export const SERVICES: Service[] = [
     detail:
       "The finishing layer of a room. Browse the catalogue or tell us the look you want and we will suggest pieces that fit the space.",
     points: ["Mirrors & wall décor", "Figurines & sculptures", "Vases & florals", "Lamps & accent furniture"],
-    image: figurines.url,
+    image: figurines,
   },
   {
     slug: "3d-interior-visualization",
@@ -456,8 +454,8 @@ export const PORTFOLIO: PortfolioItem[] = [
       "Keep the palette quiet, let texture carry the interest, and use one strong sculptural piece as the anchor of the seating arrangement.",
     services: ["Interior Design & Styling", "Premium Furniture & Décor", "Space Planning & Layout"],
     pieces: ["Center Tables", "Plastic Vase Flowers", "Frames"],
-    cover: heroCover.url,
-    gallery: [heroCover.url, brandPoster.url],
+    cover: heroCover,
+    gallery: [heroCover, brandPoster],
     concept: false,
   },
   {
@@ -471,8 +469,8 @@ export const PORTFOLIO: PortfolioItem[] = [
       "Mirrors are placed to bounce light deeper into the space, with framed pieces keeping the eye moving along the wall.",
     services: ["Interior Design & Styling", "Home Décor Accessories"],
     pieces: ["Mirrors", "Frames", "Standing Lamps"],
-    cover: portfolioStrip.url,
-    gallery: [portfolioStrip.url, mirror.url, frames.url],
+    cover: portfolioStrip,
+    gallery: [portfolioStrip, mirror, frames],
     concept: false,
   },
   {
