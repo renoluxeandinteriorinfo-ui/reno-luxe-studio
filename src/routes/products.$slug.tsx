@@ -58,7 +58,7 @@ function ProductDetail() {
             <img
               src={product.gallery[active] ?? product.image}
               alt={product.name}
-              className="w-full rounded-sm border border-border object-cover shadow-luxe"
+              className="max-h-[38rem] w-full rounded-sm border border-border bg-secondary/30 object-contain p-3 shadow-luxe"
             />
             {product.gallery.length > 1 ? (
               <div className="mt-3 flex gap-3">

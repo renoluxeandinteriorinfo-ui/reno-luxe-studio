@@ -58,7 +58,7 @@ function Viju() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="aspect-4/3 w-full object-cover"
+                className="aspect-4/3 w-full bg-secondary/30 object-contain p-2 [image-rendering:auto]"
                 loading="lazy"
               />
               <div className="p-5">

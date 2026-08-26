@@ -28,7 +28,9 @@ export function Brand({ compact = false }: { compact?: boolean }) {
         alt="Reno Luxe & Interior logo"
         width={44}
         height={44}
-        className="size-10 shrink-0 rounded-sm object-cover"
+        loading="eager"
+        decoding="async"
+        className="size-10 shrink-0 rounded-sm object-contain"
       />
       {!compact ? (
         <span className="min-w-0">
